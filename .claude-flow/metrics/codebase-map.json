@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-15T17:29:59.224Z",
+  "projectRoot": "C:\\Users\\dalig\\Desktop\\MaintainTech\\MaintainOrg\\maintain-technology",
+  "structure": {
+    "hasPackageJson": false,
+    "hasTsConfig": false,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1784136599224
+}

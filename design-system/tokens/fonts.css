@@ -1,0 +1,61 @@
+/* Maintain Technology — Brand Fonts
+ * Self-hosted @font-face for the two brand typefaces. Paths point at the font
+ * files delivered in maintain/01 Visual Identity/Typography.
+ *
+ *   Albert Sans  — Display / headings (SIL OFL 1.1, free to embed). Variable.
+ *   Vela Sans    — Body / UI / buttons (by Ravid Balaliev). Static weights.
+ *
+ * Microsoft Aptos is intentionally NOT declared here. It is NOT a brand
+ * typeface — the brand guidelines name only Albert Sans and Vela Sans. Aptos
+ * ships in the repo solely as the Microsoft Office system fallback for Word /
+ * PowerPoint documents. Do not use it on the web.
+ *
+ * Usage: link this file, then reference var(--font-display) / var(--font-body)
+ * from tokens.css. For production web, convert the .ttf/.otf to woff2.
+ */
+
+/* ---- Albert Sans (variable, weight axis 100–900) ---- */
+@font-face {
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Albert Sans/AlbertSans-VariableFont_wght.ttf") format("truetype-variations");
+}
+@font-face {
+  font-family: "Albert Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Albert Sans/AlbertSans-Italic-VariableFont_wght.ttf") format("truetype-variations");
+}
+
+/* ---- Vela Sans (static weights 200–800) ---- */
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 200; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-ExtraLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 300; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Vela Sans"; font-style: normal; font-weight: 800; font-display: swap;
+  src: url("../../maintain/01 Visual Identity/Typography/Vela Sans/VelaSans-ExtraBold.otf") format("opentype");
+}

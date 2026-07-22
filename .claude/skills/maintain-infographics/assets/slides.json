@@ -1,0 +1,51 @@
+{
+  "format": { "w": 1080, "h": 1350 },
+  "note": "Edit this array to make your carousel. One entry = one panel. Types: cover, stat, list, steps, quote, cta. Wrap ONE keyword per headline in *asterisks* (or use \"highlight\") to make it Risk Orange. Use ONLY real numbers/quotes; mark unknowns [[NEEDS: ...]].",
+  "slides": [
+    {
+      "type": "cover",
+      "eyebrow": "Enterprise Systems",
+      "headline": "Australia's enterprise systems *strikeforce*",
+      "sub": "Mission-ready SAP talent, deployed when precision, pace and credibility are non-negotiable."
+    },
+    {
+      "type": "stat",
+      "eyebrow": "The promise",
+      "value": "5",
+      "unit": "days",
+      "label": "To a *mission-ready* team",
+      "sub": "From brief to boots-on-the-ground. Not weeks of shortlists, but a full team deployed in a working week."
+    },
+    {
+      "type": "list",
+      "title": "What you *deploy* with",
+      "items": [
+        "<b>300+</b> enterprise consultants, ready to plug into your programme",
+        "Specialists in <b>SAP S/4HANA</b> and <b>SuccessFactors</b>",
+        "<b>20+ years</b> across defence, government, mining and critical infrastructure"
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "How we *move*",
+      "steps": [
+        { "title": "Recon", "desc": "We scope the mission and the exact capability it needs." },
+        { "title": "Match", "desc": "We select battle-tested talent from the fleet, not a job board." },
+        { "title": "Mobilise", "desc": "The team is deployed and operational within five days." },
+        { "title": "Deliver", "desc": "Mission-critical outcomes, held to timeline under pressure." }
+      ]
+    },
+    {
+      "type": "quote",
+      "quote": "If there's a way, we find it. If there isn't, we build it.",
+      "name": "Jonathan Pepper",
+      "role": "Founder & Managing Director, Maintain Technology"
+    },
+    {
+      "type": "cta",
+      "headline": "Ready to *move mountains*?",
+      "action": "Deploy your team",
+      "url": "maintain.com.au"
+    }
+  ]
+}

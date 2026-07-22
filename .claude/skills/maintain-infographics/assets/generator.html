@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>Maintain Technology — Infographics Engine</title>
+<!-- Real brand fonts + tokens (single source of truth). Paths: assets/ -> repo root = ../../../../ -->
+<link rel="stylesheet" href="../../../../design-system/tokens/fonts.css">
+<link rel="stylesheet" href="../../../../design-system/tokens/tokens.css">
+<style>
+  :root { --pad: 84px; --logo: url("../../../../maintain/01 Visual Identity/Logo/SVG/MaintainTechLogo_Horizontal_Primary_Dark.svg"); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #05171b; display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 40px; }
+
+  /* ---- Panel frame ---- */
+  .panel { position: relative; overflow: hidden; width: 1080px; height: 1350px; flex: none;
+    background: var(--gradient-hero); color: var(--mt-cloud); font-family: var(--font-body);
+    display: flex; flex-direction: column; padding: var(--pad); }
+  .panel.light { background: var(--mt-cloud); color: var(--mt-black); }
+  .panel.plain { background: var(--mt-black); }
+
+  .motif { position: absolute; inset: auto 0 -1px 0; width: 100%; height: 62%; object-fit: cover;
+    object-position: bottom; z-index: 0; mix-blend-mode: screen; opacity: .8;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 50%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 50%); }
+  .panel > *:not(.motif) { position: relative; z-index: 1; }
+
+  /* header / footer */
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .logo { width: 208px; height: 46px; background: var(--logo) left center / contain no-repeat; }
+  .panel.light .logo { filter: none; } /* primary_dark logo works on both; wordmark is white — swap for light below */
+  .panel.light .logo { background-image: url("../../../../maintain/01 Visual Identity/Logo/SVG/MaintainTechLogo_Horizontal_Primary_Light.svg"); }
+  .count { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: .12em;
+    color: var(--mt-cloud); opacity: .55; }
+  .panel.light .count { color: var(--mt-black); }
+
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .body.top-align { justify-content: flex-start; padding-top: 40px; }
+  .foot { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .14em;
+    font-size: 20px; font-weight: 600; color: var(--mt-cloud); opacity: .55; }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-display);
+    text-transform: uppercase; letter-spacing: .22em; font-size: 20px; font-weight: 600;
+    color: var(--mt-risk-orange); margin-bottom: 28px; }
+  .eyebrow::before { content: ""; width: 16px; height: 16px; background: var(--mt-risk-orange); }
+
+  h1.headline { font-family: var(--font-display); text-transform: uppercase; font-weight: 700;
+    font-size: 92px; line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+  .panel.light h1.headline { color: var(--mt-forge-blue); }
+  h1.headline .hl { color: var(--mt-risk-orange); }
+  .sub { font-size: 30px; line-height: 1.5; margin-top: 32px; max-width: 22ch; color: #c8cdcf; }
+  .panel.light .sub { color: #49555a; }
+
+  /* stat */
+  .stat-num { font-family: var(--font-display); font-weight: 700; font-size: 400px; line-height: .82;
+    letter-spacing: -0.04em; color: #fff; }
+  .panel.light .stat-num { color: var(--mt-forge-blue); }
+  .stat-num .unit { color: var(--mt-risk-orange); font-size: 150px; }
+  .stat-label { font-family: var(--font-display); text-transform: uppercase; font-weight: 600;
+    font-size: 52px; line-height: 1.1; letter-spacing: -0.01em; margin-top: 12px; }
+  .stat-sub { font-size: 30px; color: #c8cdcf; margin-top: 24px; max-width: 24ch; }
+
+  /* list */
+  .h-title { font-family: var(--font-display); text-transform: uppercase; font-weight: 700;
+    font-size: 62px; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 44px; }
+  .h-title .hl { color: var(--mt-risk-orange); }
+  .cards { display: flex; flex-direction: column; gap: 22px; }
+  .card { display: flex; gap: 26px; align-items: flex-start; background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.14); border-radius: 12px; padding: 30px 34px; }
+  .card .mark { width: 18px; height: 18px; background: var(--mt-risk-orange); margin-top: 12px; flex: none; }
+  .card .txt { font-size: 32px; line-height: 1.4; }
+  .card .txt b { color: #fff; }
+
+  /* steps */
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 32px; padding: 4px 0 44px; position: relative; }
+  .step:last-child { padding-bottom: 0; }
+  .step .n { width: 76px; height: 76px; flex: none; border-radius: 12px; background: var(--mt-risk-orange);
+    color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 40px;
+    display: grid; place-items: center; box-shadow: 0 0 0 1px rgba(255,95,0,.35), 0 8px 28px -6px rgba(255,95,0,.45); }
+  .step .line { position: absolute; left: 37px; top: 84px; bottom: 12px; width: 2px; background: rgba(255,255,255,.16); }
+  .step:last-child .line { display: none; }
+  .step .st { padding-top: 6px; }
+  .step .st h4 { font-family: var(--font-display); text-transform: uppercase; font-weight: 600;
+    font-size: 36px; line-height: 1.15; letter-spacing: -0.01em; }
+  .step .st p { font-size: 28px; line-height: 1.45; color: #c8cdcf; margin-top: 10px; max-width: 26ch; }
+
+  /* quote */
+  .qmark { font-family: var(--font-display); font-weight: 700; font-size: 220px; line-height: .6;
+    color: var(--mt-risk-orange); height: 120px; }
+  .quote { font-size: 52px; line-height: 1.32; font-weight: 500; text-wrap: balance; max-width: 20ch; }
+  .panel.light .quote { color: var(--mt-forge-blue); }
+  .attr { margin-top: 48px; }
+  .attr .name { font-family: var(--font-display); text-transform: uppercase; font-weight: 600;
+    font-size: 32px; letter-spacing: .02em; }
+  .attr .role { font-size: 26px; color: #c8cdcf; margin-top: 6px; }
+
+  /* cta */
+  .pill { display: inline-flex; align-items: center; align-self: flex-start; background: var(--mt-risk-orange);
+    color: #fff; font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+    font-size: 34px; padding: 26px 44px; border-radius: 10px; margin-top: 44px; }
+  .cta-url { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .06em;
+    font-weight: 600; font-size: 30px; margin-top: 40px; color: var(--mt-risk-orange); }
+
+  .placeholder { outline: 2px dashed var(--mt-risk-orange); outline-offset: 6px; }
+
+  /* Print: one panel per page at exact pixel size (drives carousel.pdf) */
+  @media print {
+    body { padding: 0; gap: 0; background: #000; display: block; }
+    .panel { break-after: page; }
+    .panel:last-child { break-after: auto; }
+  }
+  @page { margin: 0; }
+</style>
+</head>
+<body>
+<script>
+(async () => {
+  const params = new URLSearchParams(location.search);
+  const src = params.get("src") || "slides.json";
+  let data;
+  try { data = await (await fetch(src, { cache: "no-store" })).json(); }
+  catch (e) { document.body.innerHTML = '<pre style="color:#fff;font:20px monospace">Could not load ' + src + '\\n' + e + '</pre>'; return; }
+
+  const fmt = data.format || { w: 1080, h: 1350 };
+  const slides = data.slides || [];
+  const n = slides.length;
+  const esc = s => String(s == null ? "" : s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  // one orange keyword: wrap the token marked with *asterisks* OR the `highlight` value
+  const hl = (text, key) => {
+    let t = esc(text).replace(/&lt;(\/?)b&gt;/g, "<$1b>"); // allow <b> emphasis, nothing else
+    if (key) t = t.replaceAll(esc(key), '<span class="hl">' + esc(key) + '</span>');
+    t = t.replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>');
+    return t;
+  };
+  const flag = v => v && String(v).includes("[[NEEDS") ? " placeholder" : "";
+
+  const frame = (i, inner, opts = {}) => {
+    const cls = "panel" + (opts.ground === "light" ? " light" : "") + (opts.plain ? " plain" : "");
+    const motif = opts.motif ? '<img class="motif" src="../../../../maintain/01%20Visual%20Identity/graphics/mountain%20forms%202.png" alt="">' : "";
+    const foot = opts.foot ? '<div class="foot">' + esc(opts.foot) + '</div>' : '<div></div>';
+    return '<section class="' + cls + '" style="width:' + fmt.w + 'px;height:' + fmt.h + 'px" data-panel="' + i + '">'
+      + motif
+      + '<div class="top"><div class="logo"></div><div class="count">' + String(i + 1).padStart(2, "0") + " / " + String(n).padStart(2, "0") + '</div></div>'
+      + '<div class="body' + (opts.topAlign ? " top-align" : "") + '">' + inner + '</div>'
+      + foot
+      + '</section>';
+  };
+
+  const eyebrow = s => s.eyebrow ? '<div class="eyebrow">' + esc(s.eyebrow) + '</div>' : "";
+
+  const render = {
+    cover: s => frame(s._i, eyebrow(s)
+      + '<h1 class="headline">' + hl(s.headline, s.highlight) + '</h1>'
+      + (s.sub ? '<p class="sub">' + esc(s.sub) + '</p>' : ""),
+      { motif: true, foot: s.foot || "Made to Move Mountains", topAlign: true }),
+
+    stat: s => frame(s._i, eyebrow(s)
+      + '<div class="stat-num' + flag(s.value) + '">' + esc(s.value) + (s.unit ? '<span class="unit">' + esc(s.unit) + '</span>' : "") + '</div>'
+      + (s.label ? '<div class="stat-label">' + hl(s.label, s.highlight) + '</div>' : "")
+      + (s.sub ? '<div class="stat-sub">' + esc(s.sub) + '</div>' : ""),
+      { foot: s.foot }),
+
+    list: s => frame(s._i, (s.title ? '<h2 class="h-title">' + hl(s.title, s.highlight) + '</h2>' : "")
+      + '<div class="cards">' + (s.items || []).map(it => '<div class="card"><span class="mark"></span><div class="txt">' + hl(it) + '</div></div>').join("") + '</div>',
+      { topAlign: true, foot: s.foot }),
+
+    steps: s => frame(s._i, (s.title ? '<h2 class="h-title">' + hl(s.title, s.highlight) + '</h2>' : "")
+      + '<div class="steps">' + (s.steps || []).map((st, k) => '<div class="step"><div class="n">' + (k + 1) + '</div><div class="line"></div><div class="st"><h4>' + esc(st.title || st.t) + '</h4>' + (st.desc || st.d ? '<p>' + esc(st.desc || st.d) + '</p>' : "") + '</div></div>').join("") + '</div>',
+      { topAlign: true, foot: s.foot }),
+
+    quote: s => frame(s._i, '<div class="qmark">"</div>'
+      + '<blockquote class="quote' + flag(s.quote) + '">' + esc(s.quote) + '</blockquote>'
+      + '<div class="attr"><div class="name">' + esc(s.name) + '</div>' + (s.role ? '<div class="role">' + esc(s.role) + '</div>' : "") + '</div>',
+      { ground: s.ground, foot: s.foot }),
+
+    cta: s => frame(s._i, '<h1 class="headline">' + hl(s.headline, s.highlight) + '</h1>'
+      + (s.action ? '<div class="pill">' + esc(s.action) + '</div>' : "")
+      + (s.url ? '<div class="cta-url">' + esc(s.url) + '</div>' : ""),
+      { motif: true, foot: s.foot || "Made to Move Mountains" }),
+  };
+
+  document.body.innerHTML = slides.map((s, i) => { s._i = i; return (render[s.type] || (() => frame(i, '<p style="color:#f66">Unknown panel type: ' + esc(s.type) + '</p>')))(s); }).join("");
+  document.body.setAttribute("data-ready", String(n));
+  window.__PANELS__ = n;
+})();
+</script>
+</body>
+</html>

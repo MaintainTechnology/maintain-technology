@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maintain Technology · Design System</title>
+<link rel="stylesheet" href="tokens/fonts.css">
+<link rel="stylesheet" href="tokens/tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--color-bg); color: var(--color-ink);
+    font-family: var(--font-body); font-size: var(--text-body); line-height: var(--lh-body);
+    -webkit-font-smoothing: antialiased; transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+  }
+  h1,h2,h3,h4 { font-family: var(--font-display); text-transform: uppercase; color: var(--color-ink-strong);
+    letter-spacing: var(--tracking-display); line-height: var(--lh-heading); margin: 0; text-wrap: balance; }
+  section h2 { font-size: var(--text-h2); font-weight: var(--fw-bold); }   /* 32px, clear step above body */
+  section h3 { font-size: var(--text-h4); font-weight: var(--fw-semibold); }
+  .wrap { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); }
+  section { padding: var(--section-y) 0; border-top: 1px solid var(--color-border); }
+  .eyebrow { display: inline-flex; align-items: center; gap: var(--space-2);
+    font-family: var(--font-display); font-size: var(--text-eyebrow); font-weight: var(--fw-semibold);
+    text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--color-ink-muted); margin-bottom: var(--space-4); }
+  .eyebrow::before { content: ""; width: 12px; height: 12px; background: var(--color-primary); border-radius: var(--radius-none); }
+  .lede { font-size: var(--text-body-lg); color: var(--color-ink-muted); max-width: 58ch; margin-top: var(--space-4); }
+  .grid { display: grid; gap: var(--space-4); }
+  .cols-auto { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+  /* Top bar */
+  header.bar { position: sticky; top: 0; z-index: var(--z-sticky); background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); }
+  header.bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: var(--space-3); }
+  .brand svg { height: 30px; width: auto; display: block; }
+  .brand b { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: var(--color-ink-strong); }
+  .toggle { font-family: var(--font-body); font-weight: var(--fw-bold); text-transform: uppercase; font-size: var(--text-body-sm);
+    letter-spacing: .08em; background: transparent; color: var(--color-ink); border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-pill); padding: 8px 18px; cursor: pointer; transition: var(--transition-base); }
+  .toggle:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; background: var(--gradient-hero); border-top: 0; }
+  .hero .wrap { position: relative; z-index: 1; padding-top: var(--space-9); padding-bottom: var(--space-10); }
+  .hero h1 { color: #fff; font-size: var(--text-display-xl); font-weight: var(--fw-bold); max-width: 16ch; }
+  .hero h1 .hl { color: var(--color-primary); }
+  .hero p { color: #9AA3A6; font-size: var(--text-body-lg); max-width: 46ch; margin-top: var(--space-5); }
+  /* Real brand asset: the wireframe mountain motif. Pure-black ground drops out
+     via mix-blend-mode: screen, leaving only the orange/teal lines over the hero. */
+  .hero-motif { position: absolute; inset: auto 0 -1px 0; width: 100%; height: 68%; object-fit: cover;
+    object-position: bottom; z-index: 0; mix-blend-mode: screen; opacity: .85;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 45%); }
+
+  /* Swatches */
+  .swatch { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); }
+  .swatch .chip { height: 84px; }
+  .swatch .meta { padding: var(--space-3) var(--space-4); }
+  .swatch .name { font-family: var(--font-display); text-transform: uppercase; font-size: .82rem; letter-spacing: .04em; color: var(--color-ink-strong); }
+  .swatch .hex { font-family: var(--font-body); font-size: var(--text-caption); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: .05em; }
+  .ramp { display: flex; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); }
+  .ramp span { flex: 1; height: 44px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 4px; font-size: 9px; color: #fff8; }
+  .ramp-label { font-size: var(--text-caption); color: var(--color-ink-muted); margin: var(--space-4) 0 var(--space-1); text-transform: uppercase; letter-spacing: .08em; }
+
+  /* Type specimens */
+  .spec { display: grid; grid-template-columns: 92px 1fr; gap: var(--space-4); align-items: baseline; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+  .spec code { font-family: var(--font-body); font-size: var(--text-caption); color: var(--color-ink-muted); }
+  .d-xl { font: var(--fw-bold) var(--text-h1)/1.1 var(--font-display); text-transform: uppercase; color: var(--color-ink-strong); }
+  .d-h2 { font: var(--fw-semibold) var(--text-h3)/1.3 var(--font-display); text-transform: uppercase; color: var(--color-ink-strong); }
+  .d-h4 { font: var(--fw-semibold) var(--text-h5)/1.4 var(--font-display); color: var(--color-ink-strong); }
+  .d-body { font: var(--fw-regular) var(--text-body)/1.6 var(--font-body); color: var(--color-ink); }
+  .d-sm { font: var(--fw-regular) var(--text-body-sm)/1.5 var(--font-body); color: var(--color-ink-muted); }
+
+  /* Components */
+  .btn { font-family: var(--font-body); font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: .04em;
+    border-radius: var(--radius-md); padding: 14px 26px; border: 1px solid transparent; cursor: pointer; transition: var(--transition-base); font-size: var(--text-body-sm); }
+  .btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+  .btn-primary:hover { background: var(--color-primary-hover); box-shadow: var(--glow-ember); }
+  .btn-secondary { background: transparent; color: var(--color-ink); border-color: var(--color-border-strong); }
+  .btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-md); }
+  .tile { width: 64px; height: 64px; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--color-surface) 90%, #000);
+    display: grid; place-items: center; box-shadow: var(--glow-ember); margin-bottom: var(--space-4); }
+  .tile svg { width: 30px; height: 30px; stroke: #fff; fill: none; stroke-width: 2; }
+  .gradbox { height: 120px; border-radius: var(--radius-lg); border: 1px solid var(--color-border);
+    display: flex; align-items: flex-end; padding: var(--space-3); font-size: var(--text-caption); color: #fff; text-transform: uppercase; letter-spacing: .06em; }
+  .motif { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: #000; }
+  .motif img { display: block; width: 100%; height: 200px; object-fit: cover; object-position: center; }
+  .motif.vec { background: var(--mt-forge-blue); }
+  .motif.vec img { object-fit: contain; padding: var(--space-4); }
+  .motif figcaption { padding: var(--space-3) var(--space-4); font-size: var(--text-caption); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: .05em; }
+  .motif figcaption code { text-transform: none; color: var(--color-ink); }
+  .iconstrip { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; margin-bottom: var(--space-5); }
+  .iconstrip img { width: 34px; height: 34px; object-fit: contain; }
+  /* Core icons are Forge Blue (dark ink) — show on a light chip so they read
+     (their canonical dark-on-light usage; reverse to white on dark in real use). */
+  .iconstrip.on-light { background: var(--mt-cloud); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); gap: var(--space-5); }
+  .note { font-size: var(--text-body-sm); color: var(--color-ink-muted); }
+  a { color: var(--color-primary); }
+  footer { border-top: 1px solid var(--color-border); padding: var(--space-6) 0; color: var(--color-ink-muted); font-size: var(--text-body-sm); }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="brand">
+      <!-- Logomark: three ascending peak strokes (Risk Orange) -->
+      <svg viewBox="0 0 4000 2555.24" role="img" aria-label="Maintain Technology logomark">
+        <g fill="var(--mt-risk-orange)">
+          <path d="M4000,1399.42v1123.71c0,17.73-14.37,32.11-32.11,32.11h-1046.2c-28.6,0-42.93-34.58-22.7-54.81l1101-1101Z"/>
+          <path d="M4000,32.17v1367.25h-222.46c-42.58,0-83.41,16.91-113.51,47.02l-1099.39,1099.39c-6.02,6.02-14.19,9.4-22.7,9.4h-1065c-28.6,0-42.93-34.58-22.7-54.81L3945.19,9.47c20.23-20.23,54.81-5.9,54.81,22.7Z"/>
+          <path d="M2555.24,32.17v1367.25h-222.46c-42.58,0-83.41,16.91-113.51,47.02l-1099.39,1099.39c-6.02,6.02-14.19,9.4-22.7,9.4H32.17c-28.6,0-42.93-34.58-22.7-54.81L2500.43,9.47c20.23-20.23,54.81-5.9,54.81,22.7Z"/>
+        </g>
+      </svg>
+      <b>Design System</b>
+    </div>
+    <button class="toggle" id="themeBtn" onclick="toggleTheme()">Light mode</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-motif" src="../maintain/01%20Visual%20Identity/graphics/mountain%20forms%202.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <h1>Made to <span class="hl">Move</span> Mountains</h1>
+    <p>The core reference for every Maintain Technology visual: colour, type, logo, icons, motif, and components in one system.</p>
+  </div>
+</section>
+
+<!-- COLOR -->
+<section id="color"><div class="wrap">
+  <div class="eyebrow">Color</div>
+  <h2>Core palette</h2>
+  <p class="lede">Dark ground, one charge of orange. Reference the semantic colour tokens in components, not raw hex. The raw brand colours are shown below.</p>
+  <div class="grid cols-auto" style="margin-top:var(--space-6)">
+    <div class="swatch"><div class="chip" style="background:#FF5F00"></div><div class="meta"><div class="name">Risk Orange</div><div class="hex">#FF5F00 · Bright Orange C</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#07272D"></div><div class="meta"><div class="name">Forge Blue</div><div class="hex">#07272D · Pantone 5463 C</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#101820"></div><div class="meta"><div class="name">Black</div><div class="hex">#101820 · Black 6 C</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#F5F5F1"></div><div class="meta"><div class="name">Cloud</div><div class="hex">#F5F5F1 · P 179-1 U</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#E2D0A0"></div><div class="meta"><div class="name">Yellow · sand</div><div class="hex">#E2D0A0 · 7500 CP</div></div></div>
+    <div class="swatch"><div class="chip" style="background:#257A88"></div><div class="meta"><div class="name">Blue · teal</div><div class="hex">#257A88 · Biscay Bay</div></div></div>
+  </div>
+
+  <div class="ramp-label">Risk Orange · tints → core → shades</div>
+  <div class="ramp"><span style="background:#FFEFE5;color:#0008">t1</span><span style="background:#FFDFCC;color:#0008">t2</span><span style="background:#FF8F4C">t3</span><span style="background:#FF5F00">core</span><span style="background:#CC4C00">s1</span><span style="background:#662600">s2</span><span style="background:#4C1C00">s3</span></div>
+  <div class="ramp-label">Forge Blue</div>
+  <div class="ramp"><span style="background:#E6E9EA;color:#0008">t1</span><span style="background:#CDD3D5;color:#0008">t2</span><span style="background:#51676C">t3</span><span style="background:#07272D">core</span><span style="background:#051F24">s1</span><span style="background:#020F12">s2</span><span style="background:#020B0D">s3</span></div>
+  <div class="ramp-label">Black</div>
+  <div class="ramp"><span style="background:#E7E7E8;color:#0008">t1</span><span style="background:#CFD0D2;color:#0008">t2</span><span style="background:#575D62">t3</span><span style="background:#101820">core</span><span style="background:#0C1319">s1</span><span style="background:#06090C">s2</span><span style="background:#040709">s3</span></div>
+
+  <p class="note" style="margin-top:var(--space-5)">⚠️ Risk Orange as text on Cloud/White = 2.8:1 (fails). For orange-family text on light, use <b>#662600</b>. Approved: Risk Orange on dark (5.9:1), Forge Blue on Cloud (14:1), White on Blue (5:1), White on Risk Orange (large/bold only).</p>
+</div></section>
+
+<!-- TYPE -->
+<section id="type"><div class="wrap">
+  <div class="eyebrow">Typography</div>
+  <h2>Albert Sans + Vela Sans</h2>
+  <p class="lede">Albert Sans, ALL CAPS, is authority. Vela Sans is the body voice. (Aptos is Office-only, never a brand font.)</p>
+  <div style="margin-top:var(--space-6)">
+    <div class="spec"><code>h1 · 700 · caps</code><div class="d-xl">Strikeforce delivery</div></div>
+    <div class="spec"><code>h3 · 600 · caps</code><div class="d-h2">Mission-ready teams</div></div>
+    <div class="spec"><code>h5 · 600 · title</code><div class="d-h4">SAP mastery that moves your business forward</div></div>
+    <div class="spec"><code>body · 400</code><div class="d-body">Vela Sans Regular sets body copy at a comfortable 1.7 line-height, capped near 68 characters per line for readability. Emphasise inline with <b>Vela Bold</b> or Risk Orange.</div></div>
+    <div class="spec"><code>eyebrow</code><div><span class="eyebrow" style="margin:0">Capability</span></div></div>
+    <div class="spec"><code>small · 400</code><div class="d-sm">Captions, metadata, and fine print.</div></div>
+  </div>
+</div></section>
+
+<!-- COMPONENTS -->
+<section id="components"><div class="wrap">
+  <div class="eyebrow">Components</div>
+  <h2>Buttons, cards & the ember glow</h2>
+  <div style="display:flex; gap:var(--space-3); flex-wrap:wrap; margin:var(--space-6) 0">
+    <button class="btn btn-primary">Get started</button>
+    <button class="btn btn-secondary">Learn more</button>
+  </div>
+  <div class="grid cols-auto">
+    <div class="card">
+      <div class="tile">
+        <svg viewBox="0 0 24 24"><path d="M3 13l4-4 4 3 6-7" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 5h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="d-h4" style="text-transform:none">60% Faster Delivery</h3>
+      <p class="note" style="margin-top:var(--space-2)">The signature device: a white line icon in a dark tile with an orange ember glow.</p>
+    </div>
+    <div class="card">
+      <div class="tile">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-linecap="round"/><path d="M12 8v4l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="d-h4" style="text-transform:none">Deployed in 5 Days</h3>
+      <p class="note" style="margin-top:var(--space-2)">Cards: surface + 1px border, 12px radius, subtle shadow. No nested cards.</p>
+    </div>
+    <div class="card">
+      <div class="tile">
+        <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="d-h4" style="text-transform:none">300+ Consultants</h3>
+      <p class="note" style="margin-top:var(--space-2)">Stat pattern: big number (Albert), label + supporting line (Vela).</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- GRADIENTS + MOTIF -->
+<section id="graphics"><div class="wrap">
+  <div class="eyebrow">Graphic devices</div>
+  <h2>The mountain motif & gradients</h2>
+  <p class="lede">The mountain is the brand's connective identifier: orange in front, receding to teal behind. Two treatments, plus the gradient library.</p>
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:var(--space-6)">
+    <figure class="motif">
+      <img src="../maintain/01%20Visual%20Identity/graphics/mountain%20forms%202.png" alt="Wireframe mountain mesh, orange lines fading to teal">
+      <figcaption>Wireframe · raster · <code>mountain forms 2.png</code></figcaption>
+    </figure>
+    <figure class="motif vec">
+      <img src="../maintain/01%20Visual%20Identity/graphics/mountain.svg" alt="Vector mountain line-art with orange to petrol gradient">
+      <figcaption>Vector · scalable · <code>mountain.svg</code></figcaption>
+    </figure>
+  </div>
+
+  <div class="ramp-label" style="margin-top:var(--space-6)">Gradient library</div>
+  <div class="grid cols-auto">
+    <div class="gradbox" style="background:var(--gradient-hero)">Hero</div>
+    <div class="gradbox" style="background:var(--gradient-brand)">Brand</div>
+    <div class="gradbox" style="background:var(--gradient-sunset)">Sunset</div>
+    <div class="gradbox" style="background:var(--gradient-section-glow)">Section glow</div>
+    <div class="gradbox" style="background:var(--gradient-orange)">Orange</div>
+    <div class="gradbox" style="background:var(--gradient-teal)">Teal</div>
+    <div class="gradbox" style="background:var(--gradient-white);color:#101820">White</div>
+    <div class="gradbox" style="background:var(--gradient-mesh);color:#101820">Soft mesh</div>
+  </div>
+  <p class="note" style="margin-top:var(--space-5)">Ready-made high-res fills live in <a href="../maintain/01%20Visual%20Identity/graphics/">graphics/</a> (orange, teal, white, brand, Pantone). Composite the wireframe on dark grounds with <code>mix-blend-mode: screen</code>.</p>
+</div></section>
+
+<!-- ICONS -->
+<section id="icons"><div class="wrap">
+  <div class="eyebrow">Iconography</div>
+  <h2>Two icon systems</h2>
+  <p class="lede">Core set: sharp monoline, Forge Blue, for product and identity. Colored set: Phosphor, Risk Orange, now scalable SVG, for marketing. Keep them apart.</p>
+  <div class="ramp-label" style="margin-top:var(--space-6)">Core · monoline · Forge Blue · <code>Iconography/</code> <span style="text-transform:none">(shown on light — reverses to white on dark)</span></div>
+  <div class="iconstrip on-light">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Settings.png" alt="Settings">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Tool.png" alt="Tool">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Analytics%20Pie.png" alt="Analytics">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Graph%20Ascend.png" alt="Graph ascend">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Database.png" alt="Database">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Support.png" alt="Support">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Sync.png" alt="Sync">
+    <img src="../maintain/01%20Visual%20Identity/Iconography/Wifi.png" alt="Wifi">
+  </div>
+  <div class="ramp-label">Colored · Phosphor · Risk Orange · <code>icons-colored/</code> (SVG)</div>
+  <div class="iconstrip">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/ChartBar.svg" alt="Chart bar">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/ChartLine.svg" alt="Chart line">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/UsersThree.svg" alt="Users three">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/TreeStructure.svg" alt="Tree structure">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/ShieldWarning.svg" alt="Shield warning">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/Target.svg" alt="Target">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/Globe.svg" alt="Globe">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/BookOpen.svg" alt="Book open">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/LinkedinLogo.svg" alt="LinkedIn">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/PuzzlePiece.svg" alt="Puzzle piece">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/CalendarCheck.svg" alt="Calendar check">
+    <img src="../maintain/01%20Visual%20Identity/icons-colored/FlagBanner.svg" alt="Flag banner">
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <strong style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;color:var(--color-ink-strong)">Maintain Technology</strong> Design System v1.0.0 ·
+  Full spec in <a href="../DESIGN.md">DESIGN.md</a> · assets in <a href="assets.md">assets.md</a> · derived from the Brand Guidelines (May 2025) &amp; <a href="https://maintain.com.au">maintain.com.au</a>.
+</div></footer>
+
+<script>
+  function toggleTheme(){
+    const html = document.documentElement;
+    const dark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', dark ? 'light' : 'dark');
+    document.getElementById('themeBtn').textContent = dark ? 'Dark mode' : 'Light mode';
+  }
+</script>
+</body>
+</html>
