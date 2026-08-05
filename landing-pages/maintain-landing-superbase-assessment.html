@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superbase Assessment — Maintain Technology</title>
+<meta name="description" content="A Superbase Assessment captures your SAP system's design baseline before institutional knowledge walks out the door. A service of Maintain Technology.">
+
+<!--
+  Standalone shareable export — Maintain Technology brand system inlined so this
+  file renders correctly anywhere (email, Slack, another machine), not just inside
+  the maintain-technology repo checkout.
+    - design-system/tokens/tokens.css -> inlined below (semantic --color-*/--font-* tokens)
+    - Albert Sans / Vela Sans         -> hotlinked from maintain.com.au (public, same files
+                                          served by the live site)
+    - Logo + logomark                 -> inlined as real SVG markup (the actual brand mark,
+                                          reused large + faint as the mountain-motif watermark
+                                          in the hero and closing CTA panel)
+  Source draft: superbase-assessment-DRAFT.html in the maintain-technology repo.
+-->
+
+<link rel="icon" href="https://maintain.com.au/wp-content/uploads/2025/07/maintain_tech_favicon.svg">
+<style>
+  @font-face { font-family:'Albert Sans'; font-style:normal; font-weight:400; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/AlbertSans-Regular.ttf') format('truetype'); }
+  @font-face { font-family:'Albert Sans'; font-style:normal; font-weight:600; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/AlbertSans-SemiBold.ttf') format('truetype'); }
+  @font-face { font-family:'Albert Sans'; font-style:normal; font-weight:700; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/AlbertSans-Bold.ttf') format('truetype'); }
+  @font-face { font-family:'Vela Sans'; font-style:normal; font-weight:400; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/VelaSans-Regular.ttf') format('truetype'); }
+  @font-face { font-family:'Vela Sans'; font-style:normal; font-weight:600; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/VelaSans-SemiBold.ttf') format('truetype'); }
+  @font-face { font-family:'Vela Sans'; font-style:normal; font-weight:700; font-display:swap; src:url('https://maintain.com.au/wp-content/uploads/2025/07/VelaSans-Bold.ttf') format('truetype'); }
+</style>
+<style>
+/* =============================================================================
+   MAINTAIN TECHNOLOGY — DESIGN TOKENS
+   Single source of truth for color, type, space, radius, shadow, motion.
+   Values are taken from the Brand Guidelines (May 2025) and the live build at
+   maintain.com.au. Names match the guidelines (Risk Orange, Forge Blue, Cloud…).
+
+   Load order:   fonts.css  →  tokens.css  →  your styles
+   Theme:        default (:root) = LIGHT (Cloud ground). Add data-theme="dark"
+                 on <html> or any container for the dark (Forge Blue) ground.
+   ============================================================================= */
+
+:root {
+  /* ---------------------------------------------------------------------------
+     1. CORE BRAND PALETTE  (raw brand colors — do not restyle; reference the
+     semantic tokens below in components, not these raw values.)
+     --------------------------------------------------------------------------- */
+  --mt-risk-orange:   #FF5F00;  /* THE brand-defining accent. Pantone Bright Orange C */
+  --mt-forge-blue:    #07272D;  /* Primary dark, petrol-teal. Pantone 5463 C */
+  --mt-black:         #101820;  /* Ink / darkest neutral. Pantone Black 6 C */
+  --mt-cloud:         #F5F5F1;  /* Warm off-white background. Pantone P 179-1 U */
+  --mt-white:         #FFFFFF;
+  --mt-yellow:        #E2D0A0;  /* Secondary — sand / gold. Pantone 7500 CP */
+  --mt-blue:          #257A88;  /* Secondary — muted teal. Pantone Biscay Bay */
+
+  /* Risk Orange tints & shades */
+  --mt-orange-t1: #FFEFE5;  --mt-orange-t2: #FFDFCC;  --mt-orange-t3: #FF8F4C;
+  --mt-orange-s1: #CC4C00;  --mt-orange-s2: #662600;  --mt-orange-s3: #4C1C00;
+  /* Forge Blue tints & shades */
+  --mt-forge-t1: #E6E9EA;  --mt-forge-t2: #CDD3D5;  --mt-forge-t3: #51676C;
+  --mt-forge-s1: #051F24;  --mt-forge-s2: #020F12;  --mt-forge-s3: #020B0D;
+  /* Black tints & shades */
+  --mt-black-t1: #E7E7E8;  --mt-black-t2: #CFD0D2;  --mt-black-t3: #575D62;
+  --mt-black-s1: #0C1319;  --mt-black-s2: #06090C;  --mt-black-s3: #040709;
+  /* Cloud tints & shades */
+  --mt-cloud-t1: #FEFEFD;  --mt-cloud-t2: #FDFDFC;  --mt-cloud-t3: #F8F8F5;
+  --mt-cloud-s1: #C4C4C0;  --mt-cloud-s2: #626260;  --mt-cloud-s3: #494948;
+  /* Yellow tints & shades */
+  --mt-yellow-t1: #FCFAF5;  --mt-yellow-t2: #F9F5EC;  --mt-yellow-t3: #EADEBC;
+  --mt-yellow-s1: #B4A680;  --mt-yellow-s2: #5A5340;  --mt-yellow-s3: #433E30;
+  /* Blue tints & shades */
+  --mt-blue-t1: #E9F1F3;  --mt-blue-t2: #D3E4E7;  --mt-blue-t3: #66A1AB;
+  --mt-blue-s1: #1D616C;  --mt-blue-s2: #0E3036;  --mt-blue-s3: #0B2428;
+
+  /* ---------------------------------------------------------------------------
+     2. SEMANTIC COLOR ROLES — LIGHT THEME (default, Cloud ground)
+     Use THESE in components. contrast ratios verified against WCAG AA.
+     --------------------------------------------------------------------------- */
+  --color-bg:            var(--mt-cloud);     /* page ground */
+  --color-surface:       var(--mt-white);     /* cards / panels */
+  --color-surface-sunken: var(--mt-cloud-t3); /* insets, wells */
+  --color-ink:           var(--mt-black);     /* body text        16.4:1 on bg */
+  --color-ink-strong:    var(--mt-forge-blue);/* headings         14.4:1 on bg */
+  --color-ink-muted:     var(--mt-black-t3);  /* secondary text    6.1:1 on bg */
+  --color-border:        rgba(16, 24, 32, 0.12);
+  --color-border-strong: rgba(16, 24, 32, 0.24);
+
+  --color-primary:       var(--mt-risk-orange);
+  --color-primary-hover: var(--mt-orange-s1); /* #CC4C00 */
+  --color-on-primary:    var(--mt-white);     /* button label; large/bold only (AA-large) */
+  --color-primary-ink:   var(--mt-orange-s2); /* #662600 — orange-family TEXT on light (AA body) */
+
+  --color-secondary:     var(--mt-forge-blue);
+  --color-secondary-hover: var(--mt-forge-s1);
+  --color-on-secondary:  var(--mt-cloud);
+
+  --color-accent-teal:   var(--mt-blue);      /* #257A88 — sparing accent */
+  --color-accent-sand:   var(--mt-yellow);    /* #E2D0A0 — sparing accent */
+
+  --color-focus-ring:    var(--mt-risk-orange);
+  --color-selection-bg:  var(--mt-orange-t2);
+  --color-selection-fg:  var(--mt-black);
+
+  /* Status (derived from the brand hues, not a separate palette) */
+  --color-success: #1D616C;  /* Blue Shade 1 */
+  --color-warning: #B4A680;  /* Yellow Shade 1 */
+  --color-danger:  #CC4C00;  /* Risk Orange Shade 1 */
+
+  /* ---------------------------------------------------------------------------
+     3. GRADIENTS  (the brand's signature "Risk Orange" system + web hero)
+     --------------------------------------------------------------------------- */
+  --gradient-hero:        linear-gradient(152deg, #101820 55%, #07272D 100%);
+  --gradient-sunset:      linear-gradient(135deg, #FF5F00 0%, #5F3A1D 45%, #38382C 72%, #07272D 100%);
+  --gradient-section-glow: radial-gradient(120% 90% at 50% 118%, #7E4822 0%, #603B1E 32%, #07272D 72%);
+  --gradient-mesh:        linear-gradient(180deg, #07272D 0%, #FF5F00 62%, #F5F5F1 100%);
+  /* Solid-fill gradient library — CSS equivalents of the assets in
+     maintain/01 Visual Identity/graphics/ (orange / teal / white / brand). */
+  --gradient-orange:      linear-gradient(152deg, #FF5F00 0%, #CC4C00 60%, #662600 100%);
+  --gradient-teal:        linear-gradient(152deg, #257A88 0%, #0E3036 100%);   /* blue-gradient */
+  --gradient-white:       linear-gradient(180deg, #FFFFFF 0%, #F5F5F1 100%);   /* white-gradient / white bg */
+  --gradient-brand:       linear-gradient(152deg, #FF5F00 0%, #07272D 100%);   /* mountain.svg fills; gradient.jpg */
+  --gradient-starburst:   conic-gradient(from 0deg at 50% 50%,
+                            #07272D 0deg, #FF5F00 35deg, #FFFFFF 45deg, #FF5F00 55deg,
+                            #07272D 90deg, #FF5F00 125deg, #FFFFFF 135deg, #FF5F00 145deg,
+                            #07272D 180deg, #FF5F00 215deg, #FFFFFF 225deg, #FF5F00 235deg,
+                            #07272D 270deg, #FF5F00 305deg, #FFFFFF 315deg, #FF5F00 325deg, #07272D 360deg);
+
+  /* ---------------------------------------------------------------------------
+     4. TYPOGRAPHY
+     Display = Albert Sans (headings, ALL CAPS, 600/700).
+     Body    = Vela Sans (400; 700 for emphasis & button labels).
+     Fluid clamp() scale mirrors the live maintain.com.au implementation.
+     --------------------------------------------------------------------------- */
+  --font-display: "Albert Sans", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Vela Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-doc:     "Aptos", "Segoe UI", system-ui, sans-serif; /* Office docs ONLY — not a brand font */
+
+  --fw-light: 300;  --fw-regular: 400;  --fw-medium: 500;
+  --fw-semibold: 600;  --fw-bold: 700;  --fw-extrabold: 800;  --fw-black: 900;
+
+  /* Type scale (font-size) */
+  --text-display-xl: clamp(3rem, 2.5704rem + 1.833vw, 4rem);      /* 48 → 64 */
+  --text-display-l:  clamp(3rem, 2.7315rem + 1.146vw, 3.625rem);  /* 48 → 58 */
+  --text-h1:         clamp(2rem, 1.5704rem + 1.833vw, 3rem);      /* 32 → 48 */
+  --text-h2:         clamp(1.75rem, 1.6426rem + 0.458vw, 2rem);   /* 28 → 32 */
+  --text-h3:         clamp(1.5rem, 1.3926rem + 0.458vw, 1.75rem); /* 24 → 28 */
+  --text-h4:         clamp(1.25rem, 1.1426rem + 0.458vw, 1.5rem); /* 20 → 24 */
+  --text-h5:         clamp(1.125rem, 1.0713rem + 0.229vw, 1.25rem);/* 18 → 20 */
+  --text-eyebrow:    0.875rem;
+  --text-lead:       1.5rem;
+  --text-body-lg:    1.375rem;
+  --text-body:       1rem;
+  --text-body-sm:    0.875rem;
+  --text-caption:    0.75rem;
+
+  /* Line heights */
+  --lh-display: 1.1;  --lh-heading: 1.3;  --lh-snug: 1.4;
+  --lh-body: 1.7;     --lh-relaxed: 1.6;
+
+  /* Tracking */
+  --tracking-display: -0.02em;  /* tight caps for display */
+  --tracking-normal: 0;
+  --tracking-eyebrow: 0.2em;    /* wide-tracked all-caps labels & "TECHNOLOGY" wordmark */
+
+  --measure: 68ch;  /* max body line length */
+
+  /* ---------------------------------------------------------------------------
+     5. SPACING  (4px base, used everywhere)
+     --------------------------------------------------------------------------- */
+  --space-0: 0;      --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem;
+  --space-4: 1rem;   --space-5: 1.5rem;   --space-6: 2rem;    --space-7: 3rem;
+  --space-8: 4rem;   --space-9: 6rem;     --space-10: 8rem;
+  --section-y: clamp(4rem, 2.5rem + 6vw, 7.5rem); /* vertical rhythm between sections */
+
+  /* ---------------------------------------------------------------------------
+     6. LAYOUT
+     --------------------------------------------------------------------------- */
+  --container-content: 800px;   /* long-form reading width */
+  --container-wide:    1200px;  /* standard page width */
+  --container-max:     1440px;
+  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+
+  /* ---------------------------------------------------------------------------
+     7. RADIUS  (8px is the brand default — buttons; 12px for cards)
+     --------------------------------------------------------------------------- */
+  --radius-none: 0;        /* the orange section-bullet square is deliberately 0 */
+  --radius-sm: 4px;   --radius-md: 8px;   --radius-lg: 12px;
+  --radius-xl: 20px;  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------------------------
+     8. ELEVATION & the signature "ember" orange glow
+     --------------------------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 32, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 24, 32, 0.10);
+  --shadow-lg: 0 16px 40px rgba(16, 24, 32, 0.16);
+  --glow-ember: 0 0 0 1px rgba(255, 95, 0, 0.35), 0 8px 28px -6px rgba(255, 95, 0, 0.45);
+
+  /* ---------------------------------------------------------------------------
+     9. MOTION  (energetic but controlled; always honor reduced-motion)
+     --------------------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);        /* ease-out-quart */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;  --dur-base: 300ms;  --dur-slow: 500ms;
+  --transition-base: all var(--dur-base) var(--ease-out);
+
+  /* ---------------------------------------------------------------------------
+     10. Z-INDEX SCALE  (semantic — never use bare 9999)
+     --------------------------------------------------------------------------- */
+  --z-dropdown: 1000;  --z-sticky: 1100;  --z-backdrop: 1200;
+  --z-modal: 1300;     --z-toast: 1400;   --z-tooltip: 1500;
+}
+
+/* =============================================================================
+   DARK THEME  (Forge Blue / Black ground — the brand's "hero" mode: dark ground
+   + Risk Orange energy. Used for the website hero, social, Teams, cover slides.)
+   ============================================================================= */
+:root[data-theme="dark"],
+[data-theme="dark"] {
+  --color-bg:            var(--mt-black);      /* #101820 */
+  --color-surface:       var(--mt-forge-blue); /* #07272D */
+  --color-surface-sunken: var(--mt-forge-s1);
+  --color-ink:           var(--mt-cloud);      /* 16.4:1 on bg */
+  --color-ink-strong:    var(--mt-white);
+  --color-ink-muted:     #9AA3A6;              /* 7.0:1 on bg */
+  --color-border:        rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.24);
+
+  --color-primary:       var(--mt-risk-orange);
+  --color-primary-hover: var(--mt-orange-t3);  /* #FF8F4C — lighten on dark */
+  --color-on-primary:    var(--mt-white);
+  --color-primary-ink:   var(--mt-risk-orange);/* orange TEXT is AA-body on dark (5.9:1) */
+
+  --color-secondary:     var(--mt-cloud);
+  --color-on-secondary:  var(--mt-forge-blue);
+
+  --color-selection-bg:  var(--mt-risk-orange);
+  --color-selection-fg:  var(--mt-white);
+  --gradient-hero:       var(--gradient-hero);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Optional: follow the OS preference automatically. Comment out if you drive
+   theming explicitly with data-theme. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: var(--mt-black);            --color-surface: var(--mt-forge-blue);
+    --color-surface-sunken: var(--mt-forge-s1);
+    --color-ink: var(--mt-cloud);           --color-ink-strong: var(--mt-white);
+    --color-ink-muted: #9AA3A6;
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-border-strong: rgba(255, 255, 255, 0.24);
+    --color-primary-hover: var(--mt-orange-t3);
+    --color-primary-ink: var(--mt-risk-orange);
+    --color-secondary: var(--mt-cloud);     --color-on-secondary: var(--mt-forge-blue);
+  }
+}
+
+::selection { background: var(--color-selection-bg); color: var(--color-selection-fg); }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-slow: 0ms; }
+}
+
+</style>
+
+<style>
+  *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--font-body);
+    background:var(--color-bg);
+    color:var(--color-ink);
+    line-height:var(--lh-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-weight:var(--fw-bold);
+    text-transform:uppercase;
+    line-height:var(--lh-heading);
+    letter-spacing:var(--tracking-display);
+    color:var(--color-ink-strong);
+  }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+
+  /* Eyebrow label: orange square + ALL-CAPS tracked Albert Sans — DESIGN.md §9 "Other" */
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--font-display); font-weight:var(--fw-semibold);
+    font-size:var(--text-eyebrow); letter-spacing:var(--tracking-eyebrow);
+    text-transform:uppercase; color:var(--color-primary);
+  }
+  .eyebrow::before{ content:''; width:8px; height:8px; background:var(--color-primary); border-radius:var(--radius-none); flex-shrink:0; }
+
+  /* Logo lockup — inlined real SVG, sized via wrapper */
+  .logo{ display:inline-block; }
+  .logo svg{ height:32px; width:auto; }
+  .logomark{ flex-shrink:0; color:var(--color-primary); }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--font-body); font-weight:var(--fw-bold); font-size:var(--text-body);
+    text-transform:uppercase; letter-spacing:0.02em;
+    border-radius:var(--radius-md); text-decoration:none;
+    height:48px; padding:0 24px; border:1px solid transparent;
+    transition:var(--transition-base);
+  }
+  .btn-primary{ background:var(--color-primary); color:var(--color-on-primary); }
+  .btn-primary:hover{ background:var(--color-primary-hover); }
+  .btn-secondary{ background:transparent; color:var(--color-ink); border-color:var(--color-border-strong); }
+  .btn-secondary:hover{ border-color:var(--color-primary); color:var(--color-primary); }
+  .btn-lg{ height:56px; padding:0 28px; }
+
+  .wrap{ max-width:900px; margin:0 auto; padding-left:32px; padding-right:32px; }
+  .wrap-wide{ max-width:1200px; }
+
+  /* Header */
+  .site-header{ position:sticky; top:0; z-index:var(--z-sticky); background:var(--color-bg); border-bottom:1px solid var(--color-border); }
+  .site-header .wrap{ max-width:1200px; display:flex; align-items:center; justify-content:space-between; padding-top:var(--space-5); padding-bottom:var(--space-5); }
+  .site-nav{ display:flex; align-items:center; gap:var(--space-6); }
+  .nav-links{ display:flex; align-items:center; gap:var(--space-6); }
+  .site-nav a:not(.btn){ font-family:var(--font-display); font-size:13px; font-weight:var(--fw-semibold); letter-spacing:0.04em; text-transform:uppercase; text-decoration:none; color:var(--color-ink); opacity:0.85; }
+  .site-nav a:not(.btn):hover{ opacity:1; color:var(--color-primary); }
+  @media (max-width:760px){ .nav-links{ display:none; } }
+
+  /* Breadcrumb — signals this page lives inside maintain.com.au, not a detached microsite */
+  .breadcrumb{ background:var(--color-surface); border-bottom:1px solid var(--color-border); }
+  .breadcrumb .wrap{ max-width:1200px; padding-top:var(--space-3); padding-bottom:var(--space-3); display:flex; align-items:center; gap:8px; }
+  .breadcrumb a{ font-size:12px; color:var(--color-ink-muted); text-decoration:none; }
+  .breadcrumb a:hover{ color:var(--color-primary); }
+  .breadcrumb span{ font-size:12px; color:var(--color-ink-muted); }
+  .breadcrumb .current{ color:var(--color-primary); font-weight:var(--fw-semibold); }
+
+  /* Hero — gradient-hero token + the real mountain.svg motif, bottom-anchored per DESIGN.md §6 */
+  .hero{ position:relative; overflow:hidden; background:var(--gradient-hero); border-bottom:1px solid var(--color-border); }
+  .hero-mountain{ position:absolute; top:-10%; right:-8%; width:52%; max-width:560px; min-width:280px; height:auto; color:var(--mt-cloud); opacity:0.06; pointer-events:none; z-index:0; }
+  .hero .wrap{ position:relative; z-index:1; max-width:1200px; padding-top:var(--space-9); padding-bottom:var(--space-8); }
+  .hero-title{ font-size:var(--text-display-l); margin:18px 0 22px; color:var(--mt-white); }
+  .hero-title .accent{ color:var(--color-primary); }
+  .hero-subtitle{ font-family:var(--font-body); font-size:var(--text-lead); font-weight:var(--fw-regular); color:var(--color-ink-muted); max-width:var(--measure); margin-bottom:var(--space-6); }
+  .hero-stats{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:var(--space-6); }
+  .hero-stat{ background:rgba(255,95,0,0.12); border:1px solid rgba(255,95,0,0.3); border-radius:var(--radius-pill); padding:10px 18px; font-family:var(--font-display); font-size:12px; font-weight:var(--fw-bold); letter-spacing:0.04em; text-transform:uppercase; color:var(--color-primary); }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:14px; }
+
+  .body-section{ padding:var(--section-y) 0; border-bottom:1px solid var(--color-border); }
+  .body-section.on-panel{ background:var(--color-surface); }
+  .section-title{ font-size:var(--text-h2); margin:14px 0 20px; }
+  .section-body{ font-family:var(--font-body); font-size:var(--text-body); color:var(--color-ink-muted); max-width:var(--measure); }
+
+  /* Cards — DESIGN.md §9: surface, 1px border, radius 12px, shadow-md */
+  .problem-grid{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4); margin-top:var(--space-6); }
+  .problem-card{ background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:var(--space-5); box-shadow:var(--shadow-md); border-left:3px solid var(--color-primary); }
+  .body-section.on-panel .problem-card{ background:var(--color-surface); }
+  .problem-card p{ font-size:var(--text-body-sm); color:var(--color-ink-muted); line-height:var(--lh-relaxed); }
+
+  .deliverable-list{ list-style:none; margin-top:var(--space-6); }
+  .deliverable-list li{ display:flex; align-items:flex-start; gap:var(--space-4); padding:var(--space-4) 0; border-bottom:1px solid var(--color-border); }
+  .deliverable-list li:last-child{ border-bottom:none; }
+  /* "White line icon in a dark rounded tile with an orange ember glow" — DESIGN.md §9 Cards */
+  .deliverable-num{ background:var(--mt-black); color:var(--mt-white); font-family:var(--font-display); font-size:13px; font-weight:var(--fw-bold); min-width:32px; height:32px; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; box-shadow:var(--glow-ember); }
+  .deliverable-text strong{ display:block; font-family:var(--font-display); font-size:14px; font-weight:var(--fw-bold); text-transform:uppercase; letter-spacing:0.02em; color:var(--color-ink-strong); margin-bottom:5px; }
+  .deliverable-text span{ font-size:var(--text-body-sm); color:var(--color-ink-muted); line-height:var(--lh-relaxed); }
+
+  .steps{ margin-top:var(--space-6); }
+  .step{ display:flex; align-items:flex-start; gap:20px; margin-bottom:30px; position:relative; }
+  .step::before{ content:''; position:absolute; left:15px; top:40px; width:2px; height:calc(100% + 8px); background:rgba(255,95,0,0.2); }
+  .step:last-child::before{ display:none; }
+  .step-circle{ background:var(--mt-black); border:2px solid var(--color-primary); color:var(--color-primary); font-family:var(--font-display); font-size:14px; font-weight:var(--fw-bold); min-width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; z-index:1; box-shadow:var(--glow-ember); }
+  .step-content strong{ display:block; font-family:var(--font-display); font-size:13px; font-weight:var(--fw-bold); text-transform:uppercase; color:var(--color-primary); letter-spacing:0.08em; margin-bottom:5px; }
+  .step-content span{ font-size:var(--text-body-sm); color:var(--color-ink-muted); line-height:var(--lh-relaxed); }
+
+  .timeline{ background:var(--mt-black); border:1px solid var(--color-border-strong); border-radius:var(--radius-lg); padding:var(--space-6); margin-top:var(--space-6); display:flex; justify-content:space-around; text-align:center; flex-wrap:wrap; gap:16px; }
+  .timeline-item strong{ display:block; font-family:var(--font-display); font-size:24px; font-weight:var(--fw-bold); color:var(--color-primary); }
+  .timeline-item span{ font-size:11.5px; color:var(--color-ink-muted); text-transform:uppercase; letter-spacing:0.1em; }
+
+  /* Final CTA — Risk Orange full-bleed, per the brand's signature CTA pattern */
+  .cta-panel{ position:relative; overflow:hidden; background:var(--color-primary); padding:var(--space-8) 0; text-align:center; }
+  .cta-panel .wrap{ position:relative; z-index:1; max-width:640px; }
+  .cta-mountain{ position:absolute; bottom:-16%; left:-6%; width:38%; max-width:380px; min-width:220px; height:auto; color:var(--mt-black); opacity:0.14; pointer-events:none; z-index:0; }
+  .cta-title{ font-size:var(--text-h1); color:var(--mt-white); margin-bottom:16px; }
+  .cta-body{ font-family:var(--font-body); font-size:var(--text-body); color:rgba(255,255,255,0.9); margin-bottom:var(--space-6); line-height:var(--lh-relaxed); }
+  .cta-panel .btn-solid{ background:var(--mt-black); color:var(--mt-white); }
+  .cta-panel .btn-solid:hover{ background:#000; }
+
+  /* Footer */
+  .site-footer{ background:var(--color-bg); padding-top:var(--space-7); }
+  .footer-top{ max-width:1200px; margin:0 auto; padding:0 32px var(--space-6); display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between; border-bottom:1px solid var(--color-border); }
+  .footer-brand .logo svg{ height:28px; margin-bottom:16px; }
+  .footer-brand p{ font-size:13px; color:var(--color-ink-muted); max-width:280px; }
+  .footer-cols{ display:flex; flex-wrap:wrap; gap:48px; }
+  .footer-col h4{ font-family:var(--font-display); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--color-primary); margin-bottom:14px; }
+  .footer-col a{ display:block; font-size:13px; color:var(--color-ink-muted); text-decoration:none; margin-bottom:10px; }
+  .footer-col a:hover{ color:var(--color-primary); }
+  .footer-bottom{ max-width:1200px; margin:0 auto; padding:22px 32px 12px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; }
+  .footer-bottom span, .footer-bottom a{ font-size:11.5px; color:var(--color-ink-muted); letter-spacing:0.03em; text-decoration:none; }
+  .footer-bottom a:hover{ color:var(--color-primary); }
+  .footer-legal{ display:flex; gap:20px; }
+  .footer-mark{ display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 0 24px; }
+  .footer-mark svg{ width:15px; height:auto; color:var(--color-ink-muted); }
+
+  @media (max-width:640px){
+    .problem-grid{ grid-template-columns:1fr; }
+    .wrap{ padding-left:20px; padding-right:20px; }
+    .footer-top{ padding-left:20px; padding-right:20px; }
+    .footer-bottom{ padding-left:20px; padding-right:20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Real logomark (MaintainTechLogo_Logomark_Primary_Dark.svg), defined once, reused via <use>
+       for the small mountain-mark accents in the footer. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mt-logomark" viewBox="0 0 4000 2555.24">
+      <path fill="currentColor" d="M4000,1399.42v1123.71c0,17.73-14.37,32.11-32.11,32.11h-1046.2c-28.6,0-42.93-34.58-22.7-54.81l1101-1101Z"/>
+      <path fill="currentColor" d="M4000,32.17v1367.25h-222.46c-42.58,0-83.41,16.91-113.51,47.02l-1099.39,1099.39c-6.02,6.02-14.19,9.4-22.7,9.4h-1065c-28.6,0-42.93-34.58-22.7-54.81L3945.19,9.47c20.23-20.23,54.81-5.9,54.81,22.7Z"/>
+      <path fill="currentColor" d="M2555.24,32.17v1367.25h-222.46c-42.58,0-83.41,16.91-113.51,47.02l-1099.39,1099.39c-6.02,6.02-14.19,9.4-22.7,9.4H32.17c-28.6,0-42.93-34.58-22.7-54.81L2500.43,9.47c20.23-20.23,54.81-5.9,54.81,22.7Z"/>
+    </symbol>
+  </svg>
+
+  <!-- Header — real horizontal Primary_Dark lockup (Risk Orange mark + white wordmark) -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="https://maintain.com.au" aria-label="Maintain Technology — home">
+        <svg viewBox="0 0 4000 845.33" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#fff">
+            <path d="M1663.42,644.04h-55.11v151.01h-30.86v-151.01h-55.11v-28.11h141.09v28.11Z"/>
+            <path d="M1800.57,644.04v47.4h82.95v28.11h-82.95v47.39h88.73v28.11h-119.32v-179.12h119.32v28.11h-88.73Z"/>
+            <path d="M2085.86,644.32c-35.55,0-59.52,25.9-59.52,61.18s23.98,61.18,59.52,61.18c21.22,0,38.3-11.57,47.67-24.52l24.8,19.01c-15.43,22.32-40.78,36.1-72.47,36.1-53.18,0-90.11-38.58-90.11-91.77s36.93-91.76,90.11-91.76c31.69,0,57.04,13.78,72.47,36.1l-24.8,18.19c-9.37-13.23-26.45-23.7-47.67-23.7Z"/>
+            <path d="M2410.4,615.93v179.12h-30.59v-74.68h-83.22v74.68h-30.59v-179.12h30.59v74.68h83.22v-74.68h30.59Z"/>
+            <path d="M2672.88,615.93v179.12h-29.76l-82.39-125.94v125.94h-30.59v-179.12h29.76l82.39,125.94v-125.94h30.59Z"/>
+            <path d="M2786.17,705.49c0-53.18,36.93-91.76,90.11-91.76s89.56,38.58,89.56,91.76-36.38,91.77-89.56,91.77-90.11-38.58-90.11-91.77ZM2934.98,705.49c0-35.27-23.15-61.18-58.7-61.18s-59.52,25.9-59.52,61.18,23.97,61.18,59.52,61.18,58.7-25.9,58.7-61.18Z"/>
+            <path d="M3197.1,766.95v28.11h-118.77v-179.12h30.59v151.01h88.18Z"/>
+            <path d="M3293.24,705.49c0-53.18,36.93-91.76,90.11-91.76s89.56,38.58,89.56,91.76-36.38,91.77-89.56,91.77-90.11-38.58-90.11-91.77ZM3442.05,705.49c0-35.27-23.15-61.18-58.7-61.18s-59.52,25.9-59.52,61.18,23.98,61.18,59.52,61.18,58.7-25.9,58.7-61.18Z"/>
+            <path d="M3668.93,797.26c-53.18,0-90.11-38.58-90.11-91.77s36.93-91.76,90.11-91.76c31.69,0,57.04,13.78,72.48,35.82l-25.08,18.19c-11.3-15.71-28.93-23.42-47.4-23.42-35.55,0-59.52,25.9-59.52,61.18s23.97,61.18,59.52,61.18c25.35,0,46.85-15.43,50.98-42.44h-52.91v-28.11h87.91v13.51c-1.93,50.98-34.17,87.63-85.98,87.63Z"/>
+            <path d="M3936.34,717.9v77.16h-30.59v-76.33l-63.93-102.79h35.27l43.82,70.27,43.82-70.27h35.27l-63.66,101.96Z"/>
+            <path d="M1996.23,497.59h-80.56l-33.17-260.64-104.26,260.64h-37.91l-104.26-260.64-33.17,260.64h-80.56l56.87-398.07h75.82l104.26,255.9,104.26-255.9h75.82l56.87,398.07Z"/>
+            <path d="M2360.96,203.77v293.81h-75.82v-31.39c-23.69,27.25-54.5,40.87-90.04,40.87-81.15,0-146.91-69.9-146.91-156.39s65.75-156.39,146.91-156.39c35.54,0,66.35,13.62,90.04,40.87v-31.39h75.82ZM2285.14,350.68c0-44.43-36.13-80.56-80.56-80.56s-80.56,36.13-80.56,80.56,36.13,80.56,80.56,80.56,80.56-36.13,80.56-80.56Z"/>
+            <path d="M2447.92,203.77h75.82v293.81h-75.82V203.77Z"/>
+            <path d="M2447.92,99.52h75.82v66.35h-75.82v-66.35Z"/>
+            <path d="M3563.01,99.52h75.82v66.35h-75.82v-66.35Z"/>
+            <path d="M2884.91,326.99v170.6h-75.82v-161.12c0-45.61-17.77-66.35-56.87-66.35-34.36,0-66.35,22.51-66.35,75.82v151.65h-75.82V203.77h75.82v28.43c20.14-23.69,44.43-37.91,88.86-37.91,67.53,0,110.18,43.84,110.18,132.69Z"/>
+            <path d="M2979.28,270.12h-37.91v-66.35h37.91v-104.26h75.82v104.26h56.87v66.35h-56.87v123.21c0,45.02,19.55,46.8,56.87,37.91v66.35c-14.81,5.92-30.8,9.48-55.68,9.48-53.91,0-77.01-38.5-77.01-93v-143.95Z"/>
+            <path d="M3476.04,203.77v293.81h-75.82v-31.39c-23.69,27.25-54.5,40.87-90.04,40.87-81.15,0-146.91-69.9-146.91-156.39s65.75-156.39,146.91-156.39c35.54,0,66.35,13.62,90.04,40.87v-31.39h75.82ZM3400.22,350.68c0-44.43-36.13-80.56-80.56-80.56s-80.56,36.13-80.56,80.56,36.13,80.56,80.56,80.56,80.56-36.13,80.56-80.56Z"/>
+            <path d="M3563.01,203.77h75.82v293.81h-75.82V203.77Z"/>
+            <path d="M4000,326.99v170.6h-75.82v-161.12c0-45.61-17.77-66.35-56.87-66.35-34.36,0-66.35,22.51-66.35,75.82v151.65h-75.82V203.77h75.82v28.43c20.14-23.69,44.43-37.91,88.86-37.91,67.53,0,110.18,43.84,110.18,132.69Z"/>
+          </g>
+          <g fill="#ff5f00">
+            <path d="M1323.3,462.96v371.75c0,5.87-4.76,10.62-10.62,10.62h-346.11c-9.46,0-14.2-11.44-7.51-18.13l364.24-364.24Z"/>
+            <path d="M1323.3,10.64v452.32h-73.59c-14.08,0-27.59,5.6-37.55,15.55l-363.7,363.7c-1.99,1.99-4.69,3.11-7.51,3.11h-352.33c-9.46,0-14.2-11.44-7.51-18.13L1305.16,3.13c6.69-6.69,18.13-1.95,18.13,7.51Z"/>
+            <path d="M845.33,10.64v452.32h-73.59c-14.08,0-27.59,5.6-37.55,15.55l-363.7,363.7c-1.99,1.99-4.69,3.11-7.51,3.11H10.64c-9.46,0-14.2-11.44-7.51-18.13L827.2,3.13c6.69-6.69,18.13-1.95,18.13,7.51Z"/>
+          </g>
+        </svg>
+      </a>
+      <nav class="site-nav">
+        <div class="nav-links">
+          <a href="https://maintain.com.au/who-we-are/">About</a>
+          <a href="https://maintain.com.au/what-we-do/">Capabilities</a>
+          <a href="https://maintain.com.au/the-maintain-promise/">Talent Solutions</a>
+          <a href="https://maintain.com.au/case-studies/">Insights</a>
+        </div>
+        <a class="btn btn-primary" href="https://maintain.com.au/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb: signals this page lives inside maintain.com.au, not a detached microsite -->
+  <div class="breadcrumb">
+    <div class="wrap">
+      <a href="https://maintain.com.au">Maintain Technology</a>
+      <span>/</span>
+      <a href="https://maintain.com.au/what-we-do/">Capabilities</a>
+      <span>/</span>
+      <span class="current">Superbase Assessment</span>
+    </div>
+  </div>
+
+  <!-- Hero — gradient-hero ground + the real mountain.svg motif anchored to the bottom edge -->
+  <section class="hero">
+    <svg class="hero-mountain" viewBox="0 0 4000 2555.24" aria-hidden="true"><use href="#mt-logomark"></use></svg>
+    <div class="wrap">
+      <span class="eyebrow">Superbase Assessment</span>
+      <h1 class="hero-title">Your SAP Design Baseline.<br><span class="accent">Documented.</span> In Weeks.</h1>
+      <p class="hero-subtitle">When your most experienced SAP people leave, the system stays. The judgement doesn't. A Superbase Assessment captures what's in your system documentation — and produces a structured design baseline before the knowledge is gone.</p>
+      <div class="hero-stats">
+        <span class="hero-stat">Typically 2–4 weeks</span>
+        <span class="hero-stat">Documentation-driven ingestion</span>
+        <span class="hero-stat">Structured baseline output</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="https://maintain.com.au/contact/">Start a Diagnostic</a>
+        <a class="btn btn-secondary btn-lg" href="#how-it-works">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="body-section">
+    <div class="wrap">
+      <span class="eyebrow">The Problem</span>
+      <h2 class="section-title">The Knowledge That Built<br>Your System Is Walking Out</h2>
+      <p class="section-body">A 2025 Horváth study of 200 companies found that only 8% of S/4HANA transformations finish on schedule. Most post-mortems point to scope or resourcing. Very few ask what walked out the door before anyone thought to document it.</p>
+      <div class="problem-grid">
+        <div class="problem-card"><p>Only 34% of organisations have fully completed their S/4HANA move. The majority are still mid-transition — dependent on ECC-era experts approaching the end of their careers.</p></div>
+        <div class="problem-card"><p>SAP entry-level openings declined 35% in a single year. The pipeline is thinning at precisely the moment the senior exit wave is accelerating.</p></div>
+        <div class="problem-card"><p>When experienced consultants leave, AI doesn't inherit the context. It inherits the process as documented. Which is often not the same thing.</p></div>
+        <div class="problem-card"><p>Most organisations don't have a capture plan. They have a resourcing plan. There's a difference — and the gap shows up at cutover.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="body-section on-panel">
+    <div class="wrap">
+      <span class="eyebrow">The Deliverable</span>
+      <h2 class="section-title">What the Assessment<br>Produces</h2>
+      <ul class="deliverable-list">
+        <li>
+          <div class="deliverable-num">1</div>
+          <div class="deliverable-text"><strong>Structured Design Baseline</strong><span>A documented record of your SAP configuration decisions, process exceptions, and the logic behind how the system actually runs.</span></div>
+        </li>
+        <li>
+          <div class="deliverable-num">2</div>
+          <div class="deliverable-text"><strong>Knowledge Gap Map</strong><span>An identification of which areas have adequate documentation and which rely entirely on people who could leave.</span></div>
+        </li>
+        <li>
+          <div class="deliverable-num">3</div>
+          <div class="deliverable-text"><strong>Capture Priority List</strong><span>A prioritised list of the knowledge most at risk, ranked by programme impact and likelihood of loss.</span></div>
+        </li>
+        <li>
+          <div class="deliverable-num">4</div>
+          <div class="deliverable-text"><strong>Transfer Recommendation</strong><span>A practical recommendation for how to close the highest-risk gaps — structured for delivery teams, not just leadership.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="body-section" id="how-it-works">
+    <div class="wrap">
+      <span class="eyebrow">The Process</span>
+      <h2 class="section-title">How a Superbase Assessment Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-circle">1</div>
+          <div class="step-content"><strong>Ingest</strong><span>We take your existing system documentation — design specs, configuration guides, process maps, anything that exists — and feed it into Superbase.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-circle">2</div>
+          <div class="step-content"><strong>Analyse</strong><span>Superbase processes the documentation and identifies gaps, dependencies, undocumented decisions, and high-risk knowledge areas.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <div class="step-content"><strong>Structure</strong><span>We produce a structured design baseline — organised, searchable, and built to be maintained as the system evolves.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-circle">4</div>
+          <div class="step-content"><strong>Validate</strong><span>Our team reviews the baseline with your key people while they're still available — filling gaps and confirming accuracy before sign-off.</span></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><strong>Week 1</strong><span>Ingest &amp; Analyse</span></div>
+        <div class="timeline-item"><strong>Week 2–3</strong><span>Structure &amp; Build</span></div>
+        <div class="timeline-item"><strong>Week 4</strong><span>Validate &amp; Deliver</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-panel">
+    <svg class="cta-mountain" viewBox="0 0 4000 2555.24" aria-hidden="true"><use href="#mt-logomark"></use></svg>
+    <div class="wrap">
+      <h2 class="cta-title">Start Before the Knowledge Leaves</h2>
+      <p class="cta-body">A Superbase Assessment is the right starting point for any organisation mid-transformation that hasn't yet captured its design baseline. Most organisations are surprised how quickly it can be done.</p>
+      <a class="btn btn-solid btn-lg" href="https://maintain.com.au/contact/">Book a Free Consult</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="https://maintain.com.au">
+          <svg viewBox="0 0 4000 845.33" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#fff">
+              <path d="M1663.42,644.04h-55.11v151.01h-30.86v-151.01h-55.11v-28.11h141.09v28.11Z"/>
+              <path d="M1800.57,644.04v47.4h82.95v28.11h-82.95v47.39h88.73v28.11h-119.32v-179.12h119.32v28.11h-88.73Z"/>
+              <path d="M2085.86,644.32c-35.55,0-59.52,25.9-59.52,61.18s23.98,61.18,59.52,61.18c21.22,0,38.3-11.57,47.67-24.52l24.8,19.01c-15.43,22.32-40.78,36.1-72.47,36.1-53.18,0-90.11-38.58-90.11-91.77s36.93-91.76,90.11-91.76c31.69,0,57.04,13.78,72.47,36.1l-24.8,18.19c-9.37-13.23-26.45-23.7-47.67-23.7Z"/>
+              <path d="M2410.4,615.93v179.12h-30.59v-74.68h-83.22v74.68h-30.59v-179.12h30.59v74.68h83.22v-74.68h30.59Z"/>
+              <path d="M2672.88,615.93v179.12h-29.76l-82.39-125.94v125.94h-30.59v-179.12h29.76l82.39,125.94v-125.94h30.59Z"/>
+              <path d="M2786.17,705.49c0-53.18,36.93-91.76,90.11-91.76s89.56,38.58,89.56,91.76-36.38,91.77-89.56,91.77-90.11-38.58-90.11-91.77ZM2934.98,705.49c0-35.27-23.15-61.18-58.7-61.18s-59.52,25.9-59.52,61.18,23.97,61.18,59.52,61.18,58.7-25.9,58.7-61.18Z"/>
+              <path d="M3197.1,766.95v28.11h-118.77v-179.12h30.59v151.01h88.18Z"/>
+              <path d="M3293.24,705.49c0-53.18,36.93-91.76,90.11-91.76s89.56,38.58,89.56,91.76-36.38,91.77-89.56,91.77-90.11-38.58-90.11-91.77ZM3442.05,705.49c0-35.27-23.15-61.18-58.7-61.18s-59.52,25.9-59.52,61.18,23.98,61.18,59.52,61.18,58.7-25.9,58.7-61.18Z"/>
+              <path d="M3668.93,797.26c-53.18,0-90.11-38.58-90.11-91.77s36.93-91.76,90.11-91.76c31.69,0,57.04,13.78,72.48,35.82l-25.08,18.19c-11.3-15.71-28.93-23.42-47.4-23.42-35.55,0-59.52,25.9-59.52,61.18s23.97,61.18,59.52,61.18c25.35,0,46.85-15.43,50.98-42.44h-52.91v-28.11h87.91v13.51c-1.93,50.98-34.17,87.63-85.98,87.63Z"/>
+              <path d="M3936.34,717.9v77.16h-30.59v-76.33l-63.93-102.79h35.27l43.82,70.27,43.82-70.27h35.27l-63.66,101.96Z"/>
+              <path d="M1996.23,497.59h-80.56l-33.17-260.64-104.26,260.64h-37.91l-104.26-260.64-33.17,260.64h-80.56l56.87-398.07h75.82l104.26,255.9,104.26-255.9h75.82l56.87,398.07Z"/>
+              <path d="M2360.96,203.77v293.81h-75.82v-31.39c-23.69,27.25-54.5,40.87-90.04,40.87-81.15,0-146.91-69.9-146.91-156.39s65.75-156.39,146.91-156.39c35.54,0,66.35,13.62,90.04,40.87v-31.39h75.82ZM2285.14,350.68c0-44.43-36.13-80.56-80.56-80.56s-80.56,36.13-80.56,80.56,36.13,80.56,80.56,80.56,80.56-36.13,80.56-80.56Z"/>
+              <path d="M2447.92,203.77h75.82v293.81h-75.82V203.77Z"/>
+              <path d="M2447.92,99.52h75.82v66.35h-75.82v-66.35Z"/>
+              <path d="M3563.01,99.52h75.82v66.35h-75.82v-66.35Z"/>
+              <path d="M2884.91,326.99v170.6h-75.82v-161.12c0-45.61-17.77-66.35-56.87-66.35-34.36,0-66.35,22.51-66.35,75.82v151.65h-75.82V203.77h75.82v28.43c20.14-23.69,44.43-37.91,88.86-37.91,67.53,0,110.18,43.84,110.18,132.69Z"/>
+              <path d="M2979.28,270.12h-37.91v-66.35h37.91v-104.26h75.82v104.26h56.87v66.35h-56.87v123.21c0,45.02,19.55,46.8,56.87,37.91v66.35c-14.81,5.92-30.8,9.48-55.68,9.48-53.91,0-77.01-38.5-77.01-93v-143.95Z"/>
+              <path d="M3476.04,203.77v293.81h-75.82v-31.39c-23.69,27.25-54.5,40.87-90.04,40.87-81.15,0-146.91-69.9-146.91-156.39s65.75-156.39,146.91-156.39c35.54,0,66.35,13.62,90.04,40.87v-31.39h75.82ZM3400.22,350.68c0-44.43-36.13-80.56-80.56-80.56s-80.56,36.13-80.56,80.56,36.13,80.56,80.56,80.56,80.56-36.13,80.56-80.56Z"/>
+              <path d="M3563.01,203.77h75.82v293.81h-75.82V203.77Z"/>
+              <path d="M4000,326.99v170.6h-75.82v-161.12c0-45.61-17.77-66.35-56.87-66.35-34.36,0-66.35,22.51-66.35,75.82v151.65h-75.82V203.77h75.82v28.43c20.14-23.69,44.43-37.91,88.86-37.91,67.53,0,110.18,43.84,110.18,132.69Z"/>
+            </g>
+            <g fill="#ff5f00">
+              <path d="M1323.3,462.96v371.75c0,5.87-4.76,10.62-10.62,10.62h-346.11c-9.46,0-14.2-11.44-7.51-18.13l364.24-364.24Z"/>
+              <path d="M1323.3,10.64v452.32h-73.59c-14.08,0-27.59,5.6-37.55,15.55l-363.7,363.7c-1.99,1.99-4.69,3.11-7.51,3.11h-352.33c-9.46,0-14.2-11.44-7.51-18.13L1305.16,3.13c6.69-6.69,18.13-1.95,18.13,7.51Z"/>
+              <path d="M845.33,10.64v452.32h-73.59c-14.08,0-27.59,5.6-37.55,15.55l-363.7,363.7c-1.99,1.99-4.69,3.11-7.51,3.11H10.64c-9.46,0-14.2-11.44-7.51-18.13L827.2,3.13c6.69-6.69,18.13-1.95,18.13,7.51Z"/>
+            </g>
+          </svg>
+        </a>
+        <p>The Strikeforce behind Australia's most critical enterprise transformations. Not your typical consulting agency.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="https://maintain.com.au/who-we-are/">Who We Are</a>
+          <a href="https://maintain.com.au/why-maintain/">Why Maintain</a>
+          <a href="https://humansoferp.com/">Humans of ERP</a>
+        </div>
+        <div class="footer-col">
+          <h4>Work With Us</h4>
+          <a href="https://maintain.com.au/what-we-do/">What We Do</a>
+          <a href="https://maintain.com.au/the-maintain-promise/">The Maintain Promise</a>
+          <a href="https://maintain.com.au/case-studies/">Case Studies</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@maintain.com.au">info@maintain.com.au</a>
+          <a href="tel:+61414530836">+61 414 530 836</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Brisbane%2C%20QLD%204000%2C%20AU" target="_blank" rel="nofollow">Brisbane, QLD 4000, AU</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maintain Technology. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="https://maintain.com.au/privacy-policy/">Privacy Policy</a>
+        <a href="https://maintain.com.au/terms-of-use/">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-mark"><svg aria-hidden="true"><use href="#mt-logomark"></use></svg></div>
+  </footer>
+
+</body>
+</html>
