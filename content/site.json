@@ -1,0 +1,876 @@
+{
+  "site": {
+    "title": "Maintain Technology",
+    "url": "https://maintain.com.au",
+    "description": "The Strikeforce Behind Australia’s Most Critical Enterprise Transformations",
+    "sourceUrl": "https://maintain.com.au"
+  },
+  "tokens": {
+    "colors": {
+      "3240151": {
+        "title": "Text Body",
+        "color": "#5B616E"
+      },
+      "5421183": {
+        "title": "Background Dark",
+        "color": "#101820"
+      },
+      "8566465": {
+        "title": "Accent 100",
+        "color": "#FFEED3"
+      },
+      "primary": {
+        "title": "Primary 950",
+        "color": "#101820"
+      },
+      "secondary": {
+        "title": "Secondary 950",
+        "color": "#07272D"
+      },
+      "text": {
+        "title": "Accent 600",
+        "color": "#FF5F00"
+      },
+      "accent": {
+        "title": "Tertiary 50",
+        "color": "#F5F5F1"
+      },
+      "ffc39a7": {
+        "title": "Primary 50",
+        "color": "#F4F7FB"
+      },
+      "8f9423f": {
+        "title": "Primary 100",
+        "color": "#E9EFF5"
+      },
+      "539075d": {
+        "title": "Primary 200",
+        "color": "#CEDDE9"
+      },
+      "bfc1432": {
+        "title": "Primary 300",
+        "color": "#A2C1D7"
+      },
+      "7f7b560": {
+        "title": "Primary 400",
+        "color": "#709FC0"
+      },
+      "2ee23c3": {
+        "title": "Primary 500",
+        "color": "#4E84A9"
+      },
+      "ad6b9d4": {
+        "title": "Primary 600",
+        "color": "#3C6A8D"
+      },
+      "9a8603c": {
+        "title": "Primary 700",
+        "color": "#315573"
+      },
+      "913a9b9": {
+        "title": "Primary 800",
+        "color": "#2C4960"
+      },
+      "4f4d9a3": {
+        "title": "Primary 900",
+        "color": "#293E51"
+      },
+      "671fe2a": {
+        "title": "Secondary 50",
+        "color": "#F1FCFC"
+      },
+      "e42c81b": {
+        "title": "Secondary 100",
+        "color": "#CFF8F6"
+      },
+      "ad3c64f": {
+        "title": "Secondary 200",
+        "color": "#9FF0EF"
+      },
+      "e92c38e": {
+        "title": "Secondary 300",
+        "color": "#67DEE1"
+      },
+      "bf872f3": {
+        "title": "Secondary 400",
+        "color": "#38C1C9"
+      },
+      "4fae6d2": {
+        "title": "Secondary 500",
+        "color": "#1FA3AD"
+      },
+      "739cd2b": {
+        "title": "Secondary 600",
+        "color": "#16808B"
+      },
+      "b19f2a2": {
+        "title": "Secondary 700",
+        "color": "#16666F"
+      },
+      "21c9501": {
+        "title": "Secondary 800",
+        "color": "#165159"
+      },
+      "99a410d": {
+        "title": "Secondary 900",
+        "color": "#17444A"
+      },
+      "830c067": {
+        "title": "Accent 50",
+        "color": "#FFF8EC"
+      },
+      "ce27173": {
+        "title": "Accent 200",
+        "color": "#FFDAA5"
+      },
+      "98a451c": {
+        "title": "Accent 300",
+        "color": "#FFBE6D"
+      },
+      "2d86aaa": {
+        "title": "Accent 400",
+        "color": "#FF9732"
+      },
+      "779ccce": {
+        "title": "Accent 500",
+        "color": "#FF780A"
+      },
+      "f6d054a": {
+        "title": "Accent 700",
+        "color": "#CC4302"
+      },
+      "f78631a": {
+        "title": "Accent 800",
+        "color": "#A1350B"
+      },
+      "97716f0": {
+        "title": "Accent 900",
+        "color": "#822E0C"
+      },
+      "8d822d4": {
+        "title": "Accent 950",
+        "color": "#461404"
+      },
+      "940fef4": {
+        "title": "Tertiary 100",
+        "color": "#EEEEE7"
+      },
+      "28d12d8": {
+        "title": "Tertiary 200",
+        "color": "#DBDACD"
+      },
+      "3d3e56f": {
+        "title": "Tertiary 300",
+        "color": "#C4C3AD"
+      },
+      "d39dd81": {
+        "title": "Tertiary 400",
+        "color": "#ABA88C"
+      },
+      "1288a85": {
+        "title": "Tertiary 500",
+        "color": "#9A9475"
+      },
+      "46d5b46": {
+        "title": "Tertiary 600",
+        "color": "#8E8668"
+      },
+      "967130e": {
+        "title": "Tertiary 700",
+        "color": "#766E58"
+      },
+      "fe2cfe1": {
+        "title": "Tertiary 800",
+        "color": "#615A4B"
+      },
+      "f3e2ec6": {
+        "title": "Tertiary 900",
+        "color": "#504B3E"
+      },
+      "00151cc": {
+        "title": "Tertiary 950",
+        "color": "#2A2620"
+      },
+      "6b403a5": {
+        "title": "Text Dark",
+        "color": "#040E10"
+      },
+      "aa81f35": {
+        "title": "Text Light",
+        "color": "#FAFAFA"
+      },
+      "e876663": {
+        "title": "Background Light",
+        "color": "#F5F5F1"
+      },
+      "ad1b670": {
+        "title": "Neutral Dark",
+        "color": "#000000"
+      },
+      "ae57984": {
+        "title": "Neutral Light",
+        "color": "#FFFFFF"
+      },
+      "591cc58": {
+        "title": "Grays - Cool 50",
+        "color": "#F3F8FA"
+      },
+      "55c55e5": {
+        "title": "Grays - Cool 100",
+        "color": "#EAF1F5"
+      },
+      "27ac167": {
+        "title": "Grays - Cool 200",
+        "color": "#D8E5ED"
+      },
+      "452fe5a": {
+        "title": "Grays - Cool 300",
+        "color": "#C0D4E1"
+      },
+      "5d564fd": {
+        "title": "Grays - Cool 400",
+        "color": "#A6BDD3"
+      },
+      "84c9ba6": {
+        "title": "Grays - Cool 500",
+        "color": "#8FA6C5"
+      },
+      "77034cd": {
+        "title": "Grays - Cool 600",
+        "color": "#7B90B6"
+      },
+      "893b5da": {
+        "title": "Grays - Cool 700",
+        "color": "#65789D"
+      },
+      "bbd3072": {
+        "title": "Grays - Cool 800",
+        "color": "#54647F"
+      },
+      "066d035": {
+        "title": "Grays - Cool 900",
+        "color": "#485467"
+      },
+      "b8c5b94": {
+        "title": "Grays - Cool 950",
+        "color": "#2A303C"
+      },
+      "9d65ec0": {
+        "title": "Grays - Warm 50",
+        "color": "#F4F3F2"
+      },
+      "0867324": {
+        "title": "Grays - Warm 100",
+        "color": "#E2E1DF"
+      },
+      "67a5daa": {
+        "title": "Grays - Warm 200",
+        "color": "#C8C4C0"
+      },
+      "7b3d673": {
+        "title": "Grays - Warm 300",
+        "color": "#A8A29C"
+      },
+      "c5f92a6": {
+        "title": "Grays - Warm 400",
+        "color": "#8F8780"
+      },
+      "def442b": {
+        "title": "Grays - Warm 500",
+        "color": "#79716B"
+      },
+      "1fdacb6": {
+        "title": "Grays - Warm 600",
+        "color": "#6E6460"
+      },
+      "23a7bf2": {
+        "title": "Grays - Warm 700",
+        "color": "#59524F"
+      },
+      "489bb60": {
+        "title": "Grays - Warm 800",
+        "color": "#4D4846"
+      },
+      "0128b92": {
+        "title": "Grays - Warm 900",
+        "color": "#453F3E"
+      },
+      "b243035": {
+        "title": "Grays - Warm 950",
+        "color": "#262322"
+      },
+      "85ddc9a": {
+        "title": "Grays - Neutral 50",
+        "color": "#F7F8F8"
+      },
+      "263fb0e": {
+        "title": "Grays - Neutral 100",
+        "color": "#EDEEF1"
+      },
+      "d4e83d8": {
+        "title": "Grays - Neutral 200",
+        "color": "#D8DBDF"
+      },
+      "2014f9a": {
+        "title": "Grays - Neutral 300",
+        "color": "#B6BAC3"
+      },
+      "42e73fb": {
+        "title": "Grays - Neutral 400",
+        "color": "#8E95A2"
+      },
+      "b941a2e": {
+        "title": "Grays - Neutral 500",
+        "color": "#6B7280"
+      },
+      "1564ddc": {
+        "title": "Grays - Neutral 600",
+        "color": "#5B616E"
+      },
+      "f1c1683": {
+        "title": "Grays - Neutral 700",
+        "color": "#4A4E5A"
+      },
+      "aca6d2d": {
+        "title": "Grays - Neutral 800",
+        "color": "#40444C"
+      },
+      "c26506e": {
+        "title": "Grays - Neutral 900",
+        "color": "#383A42"
+      },
+      "3c35464": {
+        "title": "Grays - Neutral 950",
+        "color": "#25272C"
+      }
+    },
+    "typography": {
+      "primary": {
+        "title": "Primary (Don't change or use)",
+        "family": "Roboto"
+      },
+      "secondary": {
+        "title": "Secondary (Don't change or use)",
+        "family": "Roboto Slab"
+      },
+      "text": {
+        "title": "Text",
+        "family": "Roboto"
+      },
+      "accent": {
+        "title": "Accent (Don't change or use)",
+        "family": "Roboto"
+      },
+      "cbd9b77": {
+        "title": "Title Hero",
+        "family": "Albert Sans",
+        "weight": "700",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(3rem, 2.5704rem + 1.8328vw, 4rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.1,
+          "sizes": []
+        }
+      },
+      "fab3839": {
+        "title": "H1",
+        "family": "Albert Sans",
+        "weight": "700",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(3rem, 2.7315rem + 1.1455vw, 3.625rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.3,
+          "sizes": []
+        }
+      },
+      "6a6b6af": {
+        "title": "H2",
+        "family": "Albert Sans",
+        "weight": "700",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(2rem, 1.5704rem + 1.8328vw, 3rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.3,
+          "sizes": []
+        }
+      },
+      "b9ff51a": {
+        "title": "H3",
+        "family": "Albert Sans",
+        "weight": "600",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(1.75rem, 1.6426rem + 0.4582vw, 2rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.3,
+          "sizes": []
+        }
+      },
+      "ca04559": {
+        "title": "H4",
+        "family": "Albert Sans",
+        "weight": "600",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(1.5rem, 1.3926rem + 0.4582vw, 1.75rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.4,
+          "sizes": []
+        }
+      },
+      "e6dfa95": {
+        "title": "H5",
+        "family": "Albert Sans",
+        "weight": "600",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(1.25rem, 1.1426rem + 0.4582vw, 1.5rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.4,
+          "sizes": []
+        }
+      },
+      "2dc6217": {
+        "title": "H6",
+        "family": "Albert Sans",
+        "weight": "600",
+        "size": {
+          "unit": "custom",
+          "size": "clamp(1.125rem, 1.0713rem + 0.2291vw, 1.25rem);",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.4,
+          "sizes": []
+        }
+      },
+      "e6d84a4": {
+        "title": "Sub Header",
+        "family": "Albert Sans",
+        "weight": "600",
+        "size": {
+          "unit": "custom",
+          "size": "0.875rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.6,
+          "sizes": []
+        },
+        "letterSpacing": {
+          "unit": "em",
+          "size": 0.2,
+          "sizes": []
+        }
+      },
+      "f65c388": {
+        "title": "Text XL",
+        "family": "Vela Sans",
+        "weight": "400",
+        "size": {
+          "unit": "custom",
+          "size": "1.5rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.5,
+          "sizes": []
+        }
+      },
+      "0155475": {
+        "title": "Text LG",
+        "family": "Vela Sans",
+        "weight": "400",
+        "size": {
+          "unit": "custom",
+          "size": "1.375rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.6,
+          "sizes": []
+        }
+      },
+      "c418380": {
+        "title": "Text MD",
+        "family": "Vela Sans",
+        "weight": "400",
+        "size": {
+          "unit": "custom",
+          "size": "1.125rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.6,
+          "sizes": []
+        }
+      },
+      "0e03045": {
+        "title": "Text SM",
+        "family": "Vela Sans",
+        "weight": "400",
+        "size": {
+          "unit": "custom",
+          "size": "1rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.7,
+          "sizes": []
+        }
+      },
+      "46ab430": {
+        "title": "Text XS",
+        "family": "Vela Sans",
+        "weight": "400",
+        "size": {
+          "unit": "custom",
+          "size": "0.875rem;",
+          "sizes": []
+        },
+        "lineHeight": {
+          "unit": "em",
+          "size": 1.5,
+          "sizes": []
+        }
+      }
+    },
+    "layout": {
+      "containerWidth": {
+        "unit": "px",
+        "size": 1920,
+        "sizes": []
+      },
+      "spaceBetweenWidgets": {
+        "column": "24",
+        "row": "24",
+        "isLinked": true,
+        "unit": "px",
+        "size": 24
+      },
+      "breakpoints": {
+        "md": 768,
+        "lg": 1025
+      },
+      "body": {}
+    },
+    "kitId": "8"
+  },
+  "fonts": [
+    {
+      "family": "Albert Sans",
+      "faces": [
+        {
+          "weight": "normal",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/AlbertSans-Regular.ttf"
+          }
+        },
+        {
+          "weight": "700",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/AlbertSans-Bold.ttf"
+          }
+        },
+        {
+          "weight": "600",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/AlbertSans-SemiBold.ttf"
+          }
+        }
+      ]
+    },
+    {
+      "family": "Vela Sans",
+      "faces": [
+        {
+          "weight": "normal",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/VelaSans-Regular.ttf"
+          }
+        },
+        {
+          "weight": "600",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/VelaSans-SemiBold.ttf"
+          }
+        },
+        {
+          "weight": "700",
+          "style": "normal",
+          "files": {
+            "ttf": "/assets/2025/07/VelaSans-Bold.ttf"
+          }
+        }
+      ]
+    }
+  ],
+  "nav": [
+    {
+      "id": "40",
+      "parent": "0",
+      "order": 1,
+      "objectType": "custom",
+      "label": "About",
+      "url": "#",
+      "children": []
+    },
+    {
+      "id": "1227",
+      "parent": "0",
+      "order": 1,
+      "objectType": "custom",
+      "label": "About",
+      "url": "#",
+      "children": [
+        {
+          "id": "1180",
+          "parent": "1227",
+          "order": 2,
+          "objectType": "page",
+          "label": "Who We Are",
+          "url": "/who-we-are",
+          "children": []
+        },
+        {
+          "id": "1179",
+          "parent": "1227",
+          "order": 3,
+          "objectType": "page",
+          "label": "Why Maintain",
+          "url": "/why-maintain",
+          "children": []
+        },
+        {
+          "id": "1228",
+          "parent": "1227",
+          "order": 4,
+          "objectType": "custom",
+          "label": "Humans of ERP",
+          "url": "https://humansoferp.com/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "parent": "0",
+      "order": 2,
+      "objectType": "custom",
+      "label": "Capabilities",
+      "url": "#",
+      "children": []
+    },
+    {
+      "id": "42",
+      "parent": "0",
+      "order": 3,
+      "objectType": "custom",
+      "label": "Talent Solutions ",
+      "url": "#",
+      "children": []
+    },
+    {
+      "id": "43",
+      "parent": "0",
+      "order": 4,
+      "objectType": "custom",
+      "label": "Insights",
+      "url": "#",
+      "children": []
+    },
+    {
+      "id": "44",
+      "parent": "0",
+      "order": 5,
+      "objectType": "custom",
+      "label": "Contact",
+      "url": "#",
+      "children": []
+    },
+    {
+      "id": "1229",
+      "parent": "0",
+      "order": 5,
+      "objectType": "custom",
+      "label": "Capabilities",
+      "url": "#",
+      "children": [
+        {
+          "id": "1178",
+          "parent": "1229",
+          "order": 6,
+          "objectType": "page",
+          "label": "What We Do",
+          "url": "/what-we-do",
+          "children": []
+        },
+        {
+          "id": "1239",
+          "parent": "1229",
+          "order": 7,
+          "objectType": "custom",
+          "label": "The Maintain Methodology",
+          "url": "https://maintain.com.au/what-we-do/#the_maintain_methodology",
+          "children": []
+        },
+        {
+          "id": "1243",
+          "parent": "1229",
+          "order": 8,
+          "objectType": "custom",
+          "label": "Industries We Serve",
+          "url": "https://maintain.com.au/what-we-do/#industries_we_serve",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "1230",
+      "parent": "0",
+      "order": 9,
+      "objectType": "custom",
+      "label": "Talent Solutions",
+      "url": "#",
+      "children": [
+        {
+          "id": "1177",
+          "parent": "1230",
+          "order": 10,
+          "objectType": "page",
+          "label": "The Maintain Promise",
+          "url": "/the-maintain-promise",
+          "children": []
+        },
+        {
+          "id": "1182",
+          "parent": "1230",
+          "order": 11,
+          "objectType": "page",
+          "label": "Careers",
+          "url": "/careers",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "1231",
+      "parent": "0",
+      "order": 12,
+      "objectType": "custom",
+      "label": "Insights",
+      "url": "#",
+      "children": [
+        {
+          "id": "1862",
+          "parent": "1231",
+          "order": 13,
+          "objectType": "page",
+          "label": "Case Studies",
+          "url": "/case-studies",
+          "children": []
+        },
+        {
+          "id": "1863",
+          "parent": "1231",
+          "order": 14,
+          "objectType": "page",
+          "label": "Strikeforce Newsletter",
+          "url": "/strikeforce-newsletter",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "1181",
+      "parent": "0",
+      "order": 15,
+      "objectType": "page",
+      "label": "Contact",
+      "url": "/contact",
+      "children": []
+    }
+  ],
+  "options": {
+    "company-information::contact-email": "info@maintain.com.au",
+    "company-information::phone_number": "+61414530836",
+    "company-information::full_address": "Brisbane, QLD 4000, AU",
+    "company-information::x_formerly_twitter": "http://www.linkedin.com/company/maintaintech",
+    "company-information::appointment_link": "https://outlook.office365.com/book/MaintainTechConsultation@NETORG11337872.onmicrosoft.com/",
+    "company-information::contact_form": "[forminator_form id=\"2539\"]"
+  },
+  "permalinks": {
+    "5": "/blog/navigation",
+    "57": "/",
+    "61": "/",
+    "74": "/",
+    "75": "/blog/wp-global-styles-mbs-theme-child",
+    "173": "/",
+    "548": "/thank-you",
+    "550": "/sitemap",
+    "630": "/",
+    "686": "/test-page",
+    "733": "/who-we-are",
+    "801": "/why-maintain",
+    "803": "/what-we-do",
+    "805": "/the-maintain-promise",
+    "807": "/careers",
+    "809": "/contact",
+    "811": "/strikeforce-newsletter",
+    "1225": "/",
+    "1311": "/",
+    "1851": "/case-studies",
+    "2053": "/privacy-policy",
+    "2070": "/terms-of-use",
+    "2131": "/case-study/unblocking-a-9-4m-tech-contract-through-strategic-mediation",
+    "2299": "/case-study/from-140-legacy-apps-to-one-unified-platform",
+    "2303": "/case-study/piloted-sap-iam-to-modernise-asset-management",
+    "2307": "/case-study/cut-delivery-costs-by-50-through-offshore-transition",
+    "2321": "/case-study/delivered-to-timeline-despite-repeated-schedule-delays",
+    "2325": "/case-study/improved-go-live-quality-with-assured-testing-standards",
+    "2393": "/strikeforce-newsletter-demo",
+    "2488": "/",
+    "2512": "/blog/demo-lorem-ipsum-dolor-sit-amet",
+    "2539": "/",
+    "2595": "/strikeforce-newsletter/level-up-or-fall-behind-why-cloud-delivery-demands-a-new-breed-of-leadership",
+    "2614": "/strikeforce-newsletter/ai-in-erp-how-delivery-leaders-are-turning-copilots-into-real-leverage",
+    "2621": "/strikeforce-newsletter/data-without-borders-how-the-sap-x-snowflake-alliance-is-redefining-erp-value",
+    "2622": "/strikeforce-newsletter/joule-build-deliver-the-rise-of-the-builder-in-sap",
+    "2623": "/strikeforce-newsletter/zero-copy-real-impact-sap-business-data-cloud-x-microsoft-fabric-is-the-new-ai-supply-line",
+    "2660": "/",
+    "2671": "/case-study/rescued-500k-in-avoidable-erp-cost-through-fast-assurance-led-intervention",
+    "2674": "/strikeforce-newsletter/there-are-two-kinds-of-sap-organisations-which-one-are-you"
+  }
+}

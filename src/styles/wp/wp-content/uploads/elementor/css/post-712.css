@@ -1,0 +1,58 @@
+.elementor-712 .elementor-element.elementor-element-c80faca{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:48px 48px;--row-gap:48px;--column-gap:48px;--padding-top:240px;--padding-bottom:80px;--padding-left:20px;--padding-right:20px;}.elementor-712 .elementor-element.elementor-element-c80faca:not(.elementor-motion-effects-element-type-background), .elementor-712 .elementor-element.elementor-element-c80faca > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://maintain.com.au/wp-content/uploads/2025/07/Section-Hero-Inner-bg-Pages.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-712 .elementor-element.elementor-element-31999e1{width:var( --container-widget-width, 75% );max-width:75%;--container-widget-width:75%;--container-widget-flex-grow:0;}.elementor-712 .elementor-element.elementor-element-ff0bdc0{--display:flex;--flex-direction:row;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:flex-start;--align-items:center;--gap:16px 16px;--row-gap:16px;--column-gap:16px;}.elementor-712 .elementor-element.elementor-element-ec4c152 .elementor-button-content-wrapper{flex-direction:row-reverse;}.elementor-712 .elementor-element.elementor-element-ec4c152 .elementor-button .elementor-button-content-wrapper{gap:7px;}.elementor-712 .elementor-element.elementor-element-5e3bd85 .elementor-button-content-wrapper{flex-direction:row;}.elementor-712 .elementor-element.elementor-element-5e3bd85 .elementor-button .elementor-button-content-wrapper{gap:7px;}@media(max-width:1024px){.elementor-712 .elementor-element.elementor-element-c80faca{--padding-top:150px;--padding-bottom:80px;--padding-left:20px;--padding-right:20px;}.elementor-712 .elementor-element.elementor-element-31999e1{width:100%;max-width:100%;}}/* Start custom CSS for jet-engine-component-230, class: .elementor-element-31999e1 */.elementor-712 .elementor-element.elementor-element-31999e1 #center .mbs_subtitle,
+.elementor-712 .elementor-element.elementor-element-31999e1 #center .mbs_title,
+.elementor-712 .elementor-element.elementor-element-31999e1 #center .mbs_content,
+.elementor-712 .elementor-element.elementor-element-31999e1 #center .mbs_content p{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.elementor-712 .elementor-element.elementor-element-31999e1 #no.mbs_icon,
+.elementor-712 .elementor-element.elementor-element-31999e1 #no.mbs_subtitle p,{
+    display: none !important;
+}
+
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h1 h1 {
+    display: block !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h1 h2,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h1 h3,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h1 h4 {
+    display: none !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h2 h2 {
+    display: block !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h2 h1,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h2 h3,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h2 h4 {
+    display: none !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h3 h3 {
+    display: block !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h3 h1,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h3 h2,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h3 h4 {
+    display: none !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h4 h4 {
+    display: block !important;
+}
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h4 h1,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h4 h2,
+.elementor-712 .elementor-element.elementor-element-31999e1 #tag_h4 h3 {
+    display: none !important;
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-ff0bdc0 */.elementor-712 .elementor-element.elementor-element-ff0bdc0 {
+    width: fit-content;
+}
+
+/*.elementor-712 .elementor-element.elementor-element-ff0bdc0 .single_btn #secondary_btn {*/
+/*    display: none !important;*/
+/*}*/
+
+/*.elementor-712 .elementor-element.elementor-element-ff0bdc0 .dual_btn #secondary_btn {*/
+/*    display: flex !important;*/
+/*}*//* End custom CSS */

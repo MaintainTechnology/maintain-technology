@@ -1,0 +1,78 @@
+.elementor-306 .elementor-element.elementor-element-eb83408{--display:flex;--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--align-items:flex-start;--gap:40px 40px;--row-gap:40px;--column-gap:40px;--overflow:hidden;--padding-top:40px;--padding-bottom:40px;--padding-left:40px;--padding-right:40px;}.elementor-306 .elementor-element.elementor-element-eb83408:not(.elementor-motion-effects-element-type-background), .elementor-306 .elementor-element.elementor-element-eb83408 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-position:top center;background-repeat:no-repeat;background-size:cover;}.elementor-306 .elementor-element.elementor-element-7e4a31f{--display:flex;}.elementor-306 .elementor-element.elementor-element-be794ce{--display:flex;--min-height:100px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--z-index:0;}.elementor-306 .elementor-element.elementor-element-5014c12{--display:flex;--min-height:99px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--z-index:99;}.elementor-306 .elementor-element.elementor-element-5014c12:not(.elementor-motion-effects-element-type-background), .elementor-306 .elementor-element.elementor-element-5014c12 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-5421183 );}.elementor-306 .elementor-element.elementor-element-02ac507 > .elementor-widget-container{margin:-1px 0px 0px 0px;}.elementor-306 .elementor-element.elementor-element-02ac507{z-index:99;}.elementor-306 .elementor-element.elementor-element-210d20e{--display:flex;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--overlay-opacity:1;--z-index:0;}.elementor-306 .elementor-element.elementor-element-210d20e::before, .elementor-306 .elementor-element.elementor-element-210d20e > .elementor-background-video-container::before, .elementor-306 .elementor-element.elementor-element-210d20e > .e-con-inner > .elementor-background-video-container::before, .elementor-306 .elementor-element.elementor-element-210d20e > .elementor-background-slideshow::before, .elementor-306 .elementor-element.elementor-element-210d20e > .e-con-inner > .elementor-background-slideshow::before, .elementor-306 .elementor-element.elementor-element-210d20e > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:var( --e-global-color-5421183 );--background-overlay:'';}.elementor-306 .elementor-element.elementor-element-2262db2{--display:flex;--align-items:flex-start;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--gap:20px 20px;--row-gap:20px;--column-gap:20px;}.elementor-306 .elementor-element.elementor-element-aa1faeb{text-align:start;}.elementor-306 .elementor-element.elementor-element-aa1faeb .elementor-heading-title{font-family:var( --e-global-typography-ca04559-font-family ), Sans-serif;font-size:var( --e-global-typography-ca04559-font-size );font-weight:var( --e-global-typography-ca04559-font-weight );text-transform:var( --e-global-typography-ca04559-text-transform );line-height:var( --e-global-typography-ca04559-line-height );color:var( --e-global-color-aa81f35 );}.elementor-306 .elementor-element.elementor-element-5da84df{text-align:start;}.elementor-306 .elementor-element.elementor-element-5da84df .elementor-heading-title{font-family:var( --e-global-typography-c418380-font-family ), Sans-serif;font-size:var( --e-global-typography-c418380-font-size );font-weight:var( --e-global-typography-c418380-font-weight );line-height:var( --e-global-typography-c418380-line-height );color:var( --e-global-color-aa81f35 );}@media(min-width:768px){.elementor-306 .elementor-element.elementor-element-be794ce{--width:100px;}.elementor-306 .elementor-element.elementor-element-5014c12{--width:99px;}}@media(max-width:1366px){.elementor-306 .elementor-element.elementor-element-aa1faeb .elementor-heading-title{font-size:var( --e-global-typography-ca04559-font-size );line-height:var( --e-global-typography-ca04559-line-height );}.elementor-306 .elementor-element.elementor-element-5da84df .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}@media(max-width:1024px){.elementor-306 .elementor-element.elementor-element-aa1faeb .elementor-heading-title{font-size:var( --e-global-typography-ca04559-font-size );line-height:var( --e-global-typography-ca04559-line-height );}.elementor-306 .elementor-element.elementor-element-5da84df .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}@media(max-width:767px){.elementor-306 .elementor-element.elementor-element-eb83408{--padding-top:40px;--padding-bottom:40px;--padding-left:20px;--padding-right:20px;}.elementor-306 .elementor-element.elementor-element-be794ce{--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );}.elementor-306 .elementor-element.elementor-element-5014c12{--width:99px;--min-height:99px;}.elementor-306 .elementor-element.elementor-element-210d20e{--width:80px;--min-height:80px;}.elementor-306 .elementor-element.elementor-element-aa1faeb .elementor-heading-title{font-size:var( --e-global-typography-ca04559-font-size );line-height:var( --e-global-typography-ca04559-line-height );}.elementor-306 .elementor-element.elementor-element-5da84df .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}/* Start custom CSS for container, class: .elementor-element-5014c12 */.elementor-306 .elementor-element.elementor-element-5014c12 {
+    /*width: fit-content;*/
+    padding: 19px;
+    border-radius: var(--radius-size-giant, 12px);
+    /*border: 1px solid var(--Gradient-Effect---Secondary, #E9F3FF);*/
+    /*background: rgba(19, 19, 19, 0.60);*/
+    /*box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px 0px rgba(10, 13, 18, 0.05);*/
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-be794ce *//* glow effect - start */
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.elementor-306 .elementor-element.elementor-element-be794ce .box-wrapper {
+  background: #101820;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.elementor-306 .elementor-element.elementor-element-be794ce .box {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  border-radius: 12px;
+  background: #101820;
+  position: absolute;
+}
+
+.elementor-306 .elementor-element.elementor-element-be794ce .box::after,
+.elementor-306 .elementor-element.elementor-element-be794ce .box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    #e9f3ff,
+    #fe5c01,
+    #101820,
+    #101820,
+    #fe5c01,
+    #e9f3ff,
+    #fe5c01,
+    #101820,
+    #101820,
+    #fe5c01,
+    #e9f3ff
+  );
+  z-index: -1;
+  transform: scale(1.02);
+  animation: animate 12s linear infinite;
+}
+
+.elementor-306 .elementor-element.elementor-element-be794ce .box::before {
+  filter: blur(5px);
+}
+
+@keyframes animate {
+  to {
+    --angle: 360deg;
+  }
+}
+/* glow effect - end *//* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-7e4a31f */.elementor-306 .elementor-element.elementor-element-7e4a31f {
+    width: fit-content;
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-eb83408 */.elementor-306 .elementor-element.elementor-element-eb83408 {
+    /*width: 400px;*/
+    border-radius: var(--radius-size-giant, 12px);
+    border: 1px solid var(--Colors-Grays---Neutral-800, #40444C);
+    background: var(--Glass-Effect, linear-gradient(105deg, rgba(25, 25, 25, 0.30) 8.69%, rgba(31, 31, 31, 0.12) 91.31%));
+}/* End custom CSS */

@@ -1,0 +1,808 @@
+{
+  "/assets/2025/07/mobile-menu.svg": {
+    "defaultRel": "2025/07/mobile-menu.svg",
+    "width": 32,
+    "height": 41,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/Frame-37801.svg": {
+    "defaultRel": "2025/07/Frame-37801.svg",
+    "width": 800,
+    "height": 312,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/calendar.svg": {
+    "defaultRel": "2025/07/calendar.svg",
+    "width": 43,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/dashboard-speed.svg": {
+    "defaultRel": "2025/07/dashboard-speed.svg",
+    "width": 42,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/building.svg": {
+    "defaultRel": "2025/07/building.svg",
+    "width": 43,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/depth.svg": {
+    "defaultRel": "2025/07/depth.svg",
+    "width": 43,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/delivery.svg": {
+    "defaultRel": "2025/07/delivery.svg",
+    "width": 42,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/ecology-book.svg": {
+    "defaultRel": "2025/07/ecology-book.svg",
+    "width": 43,
+    "height": 42,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/mining-Icon.svg": {
+    "defaultRel": "2025/07/mining-Icon.svg",
+    "width": 32,
+    "height": 33,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/government-Icon.svg": {
+    "defaultRel": "2025/07/government-Icon.svg",
+    "width": 32,
+    "height": 33,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/oil-and-gas-Icon.svg": {
+    "defaultRel": "2025/07/oil-and-gas-Icon.svg",
+    "width": 32,
+    "height": 33,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/manufacturing-Icon.svg": {
+    "defaultRel": "2025/07/manufacturing-Icon.svg",
+    "width": 32,
+    "height": 33,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/critical-infrastructure-Icon.svg": {
+    "defaultRel": "2025/07/critical-infrastructure-Icon.svg",
+    "width": 32,
+    "height": 33,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/maintain_tech_favicon.svg": {
+    "defaultRel": "2025/07/maintain_tech_favicon.svg",
+    "width": 512,
+    "height": 328,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/phone-bold.png": {
+    "defaultRel": "2025/07/phone-bold.png",
+    "width": 32,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/scanning.svg": {
+    "defaultRel": "2025/07/scanning.svg",
+    "width": 33,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/Support.svg": {
+    "defaultRel": "2025/07/Support.svg",
+    "width": 33,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2026/03/Untitled-design.jpg": {
+    "defaultRel": "2026/03/Untitled-design-768x432.jpg",
+    "width": 768,
+    "height": 432,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2026/03/Untitled-design-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2026/03/Untitled-design-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2026/03/Untitled-design-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2026/03/Untitled-design-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2026/03/Untitled-design.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/10/Improved-Go-Live-Quality-with-Assured-Testing-Standards.jpg": {
+    "defaultRel": "2025/10/Improved-Go-Live-Quality-with-Assured-Testing-Standards-768x529.jpg",
+    "width": 768,
+    "height": 529,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2025/10/Improved-Go-Live-Quality-with-Assured-Testing-Standards-768x529.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/10/Improved-Go-Live-Quality-with-Assured-Testing-Standards-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/Improved-Go-Live-Quality-with-Assured-Testing-Standards.jpg",
+        "w": 846
+      }
+    ]
+  },
+  "/assets/2025/10/Delivered-to-Timeline-Despite-Repeated-Schedule-Delays.jpg": {
+    "defaultRel": "2025/10/Delivered-to-Timeline-Despite-Repeated-Schedule-Delays-768x529.jpg",
+    "width": 768,
+    "height": 529,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2025/10/Delivered-to-Timeline-Despite-Repeated-Schedule-Delays-768x529.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/10/Delivered-to-Timeline-Despite-Repeated-Schedule-Delays-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/Delivered-to-Timeline-Despite-Repeated-Schedule-Delays.jpg",
+        "w": 846
+      }
+    ]
+  },
+  "/assets/2025/10/Cut-Delivery-Costs-by-50-Through-Offshore-Transition.jpg": {
+    "defaultRel": "2025/10/Cut-Delivery-Costs-by-50-Through-Offshore-Transition-768x529.jpg",
+    "width": 768,
+    "height": 529,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2025/10/Cut-Delivery-Costs-by-50-Through-Offshore-Transition-768x529.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/10/Cut-Delivery-Costs-by-50-Through-Offshore-Transition-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/Cut-Delivery-Costs-by-50-Through-Offshore-Transition.jpg",
+        "w": 846
+      }
+    ]
+  },
+  "/assets/2025/07/HoE-logo.svg": {
+    "defaultRel": "2025/07/HoE-logo.svg",
+    "width": 118,
+    "height": 53,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/MaintainTechLogo_Horizontal_Primary_Light.svg": {
+    "defaultRel": "2025/07/MaintainTechLogo_Horizontal_Primary_Light.svg",
+    "width": 184,
+    "height": 39,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/Frame-1707482178.jpg": {
+    "defaultRel": "2025/07/Frame-1707482178.jpg",
+    "width": 600,
+    "height": 621,
+    "sizes": "(max-width: 600px) 100vw, 600px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482178.jpg",
+        "w": 600
+      },
+      {
+        "rel": "2025/07/Frame-1707482178-290x300.jpg",
+        "w": 290
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482185.jpg": {
+    "defaultRel": "2025/07/Frame-1707482185.jpg",
+    "width": 800,
+    "height": 368,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482185.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482185-300x138.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482185-768x353.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482190.jpg": {
+    "defaultRel": "2025/07/Frame-1707482190.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482190.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482190-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482190-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482191.jpg": {
+    "defaultRel": "2025/07/Frame-1707482191.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482191.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482191-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482191-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482192.jpg": {
+    "defaultRel": "2025/07/Frame-1707482192.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482192.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482192-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482192-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/10/Piloted-SAP-IAM-to-Modernise-Asset-Management.jpg": {
+    "defaultRel": "2025/10/Piloted-SAP-IAM-to-Modernise-Asset-Management-768x529.jpg",
+    "width": 768,
+    "height": 529,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2025/10/Piloted-SAP-IAM-to-Modernise-Asset-Management-768x529.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/10/Piloted-SAP-IAM-to-Modernise-Asset-Management-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/Piloted-SAP-IAM-to-Modernise-Asset-Management.jpg",
+        "w": 846
+      }
+    ]
+  },
+  "/assets/2025/10/From-140-Legacy-Apps-to-One-Unified-Platform.jpg": {
+    "defaultRel": "2025/10/From-140-Legacy-Apps-to-One-Unified-Platform-768x529.jpg",
+    "width": 768,
+    "height": 529,
+    "sizes": "(max-width: 768px) 100vw, 768px",
+    "srcset": [
+      {
+        "rel": "2025/10/From-140-Legacy-Apps-to-One-Unified-Platform-768x529.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/10/From-140-Legacy-Apps-to-One-Unified-Platform-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/From-140-Legacy-Apps-to-One-Unified-Platform.jpg",
+        "w": 846
+      }
+    ]
+  },
+  "/assets/2025/10/Unblocking-a-9.4M-Tech-Contract-Through-Strategic-Mediation.jpg": {
+    "defaultRel": "2025/10/Unblocking-a-9.4M-Tech-Contract-Through-Strategic-Mediation.jpg",
+    "width": 800,
+    "height": 551,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/10/Unblocking-a-9.4M-Tech-Contract-Through-Strategic-Mediation.jpg",
+        "w": 846
+      },
+      {
+        "rel": "2025/10/Unblocking-a-9.4M-Tech-Contract-Through-Strategic-Mediation-300x207.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/10/Unblocking-a-9.4M-Tech-Contract-Through-Strategic-Mediation-768x529.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2026/03/Newsletter-Cover-Image-1.jpg": {
+    "defaultRel": "2026/03/Newsletter-Cover-Image-1-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2026/03/Newsletter-Cover-Image-1-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2026/03/Newsletter-Cover-Image-1-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2026/03/Newsletter-Cover-Image-1-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2026/03/Newsletter-Cover-Image-1-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2026/03/Newsletter-Cover-Image-1.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/12/5.jpg": {
+    "defaultRel": "2025/12/5-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/12/5-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/12/5-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/12/5-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/12/5-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2025/12/5.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/12/4.jpg": {
+    "defaultRel": "2025/12/4-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/12/4-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/12/4-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/12/4-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/12/4-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2025/12/4.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/12/3.jpg": {
+    "defaultRel": "2025/12/3-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/12/3-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/12/3-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/12/3-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/12/3-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2025/12/3.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/12/2.jpg": {
+    "defaultRel": "2025/12/2-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/12/2-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/12/2-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/12/2-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/12/2-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2025/12/2.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/12/1.jpg": {
+    "defaultRel": "2025/12/1-1024x576.jpg",
+    "width": 800,
+    "height": 450,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/12/1-1024x576.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/12/1-300x169.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/12/1-768x432.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/12/1-1536x864.jpg",
+        "w": 1536
+      },
+      {
+        "rel": "2025/12/1.jpg",
+        "w": 1920
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482186.jpg": {
+    "defaultRel": "2025/07/Frame-1707482186.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482186.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482186-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482186-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482187.jpg": {
+    "defaultRel": "2025/07/Frame-1707482187.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482187.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482187-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482187-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482188.jpg": {
+    "defaultRel": "2025/07/Frame-1707482188.jpg",
+    "width": 800,
+    "height": 366,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482188.jpg",
+        "w": 918
+      },
+      {
+        "rel": "2025/07/Frame-1707482188-300x137.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482188-768x351.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482182.jpg": {
+    "defaultRel": "2025/07/Frame-1707482182-1024x574.jpg",
+    "width": 800,
+    "height": 448,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482182-1024x574.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/07/Frame-1707482182-300x168.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482182-768x431.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/07/Frame-1707482182.jpg",
+        "w": 1263
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482183.jpg": {
+    "defaultRel": "2025/07/Frame-1707482183-1024x574.jpg",
+    "width": 800,
+    "height": 448,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482183-1024x574.jpg",
+        "w": 1024
+      },
+      {
+        "rel": "2025/07/Frame-1707482183-300x168.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Frame-1707482183-768x431.jpg",
+        "w": 768
+      },
+      {
+        "rel": "2025/07/Frame-1707482183.jpg",
+        "w": 1263
+      }
+    ]
+  },
+  "/assets/2025/07/shopping-code-check.svg": {
+    "defaultRel": "2025/07/shopping-code-check.svg",
+    "width": 32,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/verified-badge.svg": {
+    "defaultRel": "2025/07/verified-badge.svg",
+    "width": 32,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/precision-tool.svg": {
+    "defaultRel": "2025/07/precision-tool.svg",
+    "width": 32,
+    "height": 32,
+    "sizes": null,
+    "srcset": []
+  },
+  "/assets/2025/07/Jonathan-Pepper.jpg": {
+    "defaultRel": "2025/07/Jonathan-Pepper.jpg",
+    "width": 800,
+    "height": 616,
+    "sizes": "(max-width: 800px) 100vw, 800px",
+    "srcset": [
+      {
+        "rel": "2025/07/Jonathan-Pepper.jpg",
+        "w": 939
+      },
+      {
+        "rel": "2025/07/Jonathan-Pepper-300x231.jpg",
+        "w": 300
+      },
+      {
+        "rel": "2025/07/Jonathan-Pepper-768x591.jpg",
+        "w": 768
+      }
+    ]
+  },
+  "/assets/2025/07/Karla-Arias.jpg": {
+    "defaultRel": "2025/07/Karla-Arias.jpg",
+    "width": 468,
+    "height": 558,
+    "sizes": "(max-width: 468px) 100vw, 468px",
+    "srcset": [
+      {
+        "rel": "2025/07/Karla-Arias.jpg",
+        "w": 468
+      },
+      {
+        "rel": "2025/07/Karla-Arias-252x300.jpg",
+        "w": 252
+      }
+    ]
+  },
+  "/assets/2025/07/Airen-Petalbert.jpg": {
+    "defaultRel": "2025/07/Airen-Petalbert.jpg",
+    "width": 468,
+    "height": 561,
+    "sizes": "(max-width: 468px) 100vw, 468px",
+    "srcset": [
+      {
+        "rel": "2025/07/Airen-Petalbert.jpg",
+        "w": 468
+      },
+      {
+        "rel": "2025/07/Airen-Petalbert-250x300.jpg",
+        "w": 250
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482159.jpg": {
+    "defaultRel": "2025/07/Frame-1707482159.jpg",
+    "width": 491,
+    "height": 602,
+    "sizes": "(max-width: 491px) 100vw, 491px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482159.jpg",
+        "w": 491
+      },
+      {
+        "rel": "2025/07/Frame-1707482159-245x300.jpg",
+        "w": 245
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482160.jpg": {
+    "defaultRel": "2025/07/Frame-1707482160.jpg",
+    "width": 494,
+    "height": 348,
+    "sizes": "(max-width: 494px) 100vw, 494px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482160.jpg",
+        "w": 494
+      },
+      {
+        "rel": "2025/07/Frame-1707482160-300x211.jpg",
+        "w": 300
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482161.jpg": {
+    "defaultRel": "2025/07/Frame-1707482161.jpg",
+    "width": 492,
+    "height": 348,
+    "sizes": "(max-width: 492px) 100vw, 492px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482161.jpg",
+        "w": 492
+      },
+      {
+        "rel": "2025/07/Frame-1707482161-300x212.jpg",
+        "w": 300
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-37703.jpg": {
+    "defaultRel": "2025/07/Frame-37703.jpg",
+    "width": 622,
+    "height": 645,
+    "sizes": "(max-width: 622px) 100vw, 622px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-37703.jpg",
+        "w": 622
+      },
+      {
+        "rel": "2025/07/Frame-37703-289x300.jpg",
+        "w": 289
+      }
+    ]
+  },
+  "/assets/2025/07/Frame-1707482182-1.jpg": {
+    "defaultRel": "2025/07/Frame-1707482182-1.jpg",
+    "width": 629,
+    "height": 570,
+    "sizes": "(max-width: 629px) 100vw, 629px",
+    "srcset": [
+      {
+        "rel": "2025/07/Frame-1707482182-1.jpg",
+        "w": 629
+      },
+      {
+        "rel": "2025/07/Frame-1707482182-1-300x272.jpg",
+        "w": 300
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+.elementor-326 .elementor-element.elementor-element-68efc67{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:48px 48px;--row-gap:48px;--column-gap:48px;}.elementor-326 .elementor-element.elementor-element-68efc67:not(.elementor-motion-effects-element-type-background), .elementor-326 .elementor-element.elementor-element-68efc67 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://maintain.com.au/wp-content/uploads/2025/07/Frame-37802.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-326 .elementor-element.elementor-element-4b59d62{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--gap:60px 60px;--row-gap:60px;--column-gap:60px;}.elementor-326 .elementor-element.elementor-element-01093b7.elementor-element{--align-self:flex-start;}.elementor-326 .elementor-element.elementor-element-eaabc4d{--display:flex;--min-height:583px;--border-radius:8px 8px 8px 8px;}.elementor-326 .elementor-element.elementor-element-eaabc4d:not(.elementor-motion-effects-element-type-background), .elementor-326 .elementor-element.elementor-element-eaabc4d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://maintain.com.au/wp-content/uploads/2025/07/Frame-37801.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;}@media(max-width:1200px){.elementor-326 .elementor-element.elementor-element-eaabc4d:not(.elementor-motion-effects-element-type-background), .elementor-326 .elementor-element.elementor-element-eaabc4d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-position:center center;background-repeat:no-repeat;background-size:cover;}}@media(max-width:1024px){.elementor-326 .elementor-element.elementor-element-68efc67{--flex-direction:column-reverse;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-326 .elementor-element.elementor-element-eaabc4d{--min-height:450px;}}/* Start custom CSS for jet-engine-component-230, class: .elementor-element-ecd6030 */.elementor-326 .elementor-element.elementor-element-ecd6030 #center .mbs_subtitle,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #center .mbs_title,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #center .mbs_content,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #center .mbs_content p{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.elementor-326 .elementor-element.elementor-element-ecd6030 #no.mbs_icon,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #no.mbs_subtitle p,{
+    display: none !important;
+}
+
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h1 h1 {
+    display: flex !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h1 h2,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h1 h3,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h1 h4 {
+    display: none !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h2 h2 {
+    display: flex !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h2 h1,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h2 h3,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h2 h4 {
+    display: none !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h3 h3 {
+    display: flex !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h3 h1,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h3 h2,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h3 h4 {
+    display: none !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h4 h4 {
+    display: flex !important;
+}
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h4 h1,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h4 h2,
+.elementor-326 .elementor-element.elementor-element-ecd6030 #tag_h4 h3 {
+    display: none !important;
+}
+
+.elementor-326 .elementor-element.elementor-element-ecd6030 h2 {
+    width: 500px;
+}
+
+@media screen and (width <= 767px) {
+    .elementor-326 .elementor-element.elementor-element-ecd6030 h2 {
+        width: auto;
+    }
+}/* End custom CSS */
+/* Start custom CSS for jet-engine-component-171, class: .elementor-element-01093b7 */.elementor-326 .elementor-element.elementor-element-01093b7 .single_btn #secondary_btn {
+    display: none !important;
+}
+
+.elementor-326 .elementor-element.elementor-element-01093b7 .dual_btn #secondary_btn {
+    display: flex !important;
+}/* End custom CSS */

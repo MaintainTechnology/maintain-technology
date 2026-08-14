@@ -1,0 +1,75 @@
+.elementor-202 .elementor-element.elementor-element-9d562b1{--display:flex;--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--align-items:center;--gap:40px 40px;--row-gap:40px;--column-gap:40px;--overflow:hidden;--overlay-opacity:0.5;--padding-top:40px;--padding-bottom:40px;--padding-left:40px;--padding-right:40px;}.elementor-202 .elementor-element.elementor-element-9d562b1::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .e-con-inner > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .e-con-inner > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:transparent;--background-overlay:'';background-image:linear-gradient(180deg, #191919 0%, #1F1F1F66 100%);}.elementor-202 .elementor-element.elementor-element-9d562b1::before{filter:brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 7px ) hue-rotate( 0deg );}.elementor-202 .elementor-element.elementor-element-a0861f5{--display:flex;--min-height:100px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--z-index:0;}.elementor-202 .elementor-element.elementor-element-d19aec3{--display:flex;--min-height:99px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--z-index:99;}.elementor-202 .elementor-element.elementor-element-d19aec3:not(.elementor-motion-effects-element-type-background), .elementor-202 .elementor-element.elementor-element-d19aec3 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-5421183 );}.elementor-202 .elementor-element.elementor-element-37b670a > .elementor-widget-container{margin:-1px 0px 0px 0px;}.elementor-202 .elementor-element.elementor-element-37b670a{z-index:99;}.elementor-202 .elementor-element.elementor-element-7222733{--display:flex;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--overlay-opacity:1;--z-index:0;}.elementor-202 .elementor-element.elementor-element-7222733::before, .elementor-202 .elementor-element.elementor-element-7222733 > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-7222733 > .e-con-inner > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-7222733 > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-7222733 > .e-con-inner > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-7222733 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:var( --e-global-color-5421183 );--background-overlay:'';}.elementor-202 .elementor-element.elementor-element-ef7307b{--display:flex;--gap:20px 20px;--row-gap:20px;--column-gap:20px;}.elementor-202 .elementor-element.elementor-element-55211a8{text-align:center;}.elementor-202 .elementor-element.elementor-element-55211a8 .elementor-heading-title{font-family:"Albert Sans", Sans-serif;font-size:clamp(1.25rem, 1.1426rem + 0.4582vw, 1.5rem);font-weight:600;text-transform:capitalize;line-height:1.4em;color:var( --e-global-color-aa81f35 );}.elementor-202 .elementor-element.elementor-element-8358799{text-align:center;}.elementor-202 .elementor-element.elementor-element-8358799 .elementor-heading-title{font-family:var( --e-global-typography-c418380-font-family ), Sans-serif;font-size:var( --e-global-typography-c418380-font-size );font-weight:var( --e-global-typography-c418380-font-weight );line-height:var( --e-global-typography-c418380-line-height );color:var( --e-global-color-aa81f35 );}@media(max-width:1366px){.elementor-202 .elementor-element.elementor-element-8358799 .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}@media(min-width:768px){.elementor-202 .elementor-element.elementor-element-a0861f5{--width:100px;}.elementor-202 .elementor-element.elementor-element-d19aec3{--width:99px;}}@media(max-width:1024px){.elementor-202 .elementor-element.elementor-element-9d562b1::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .e-con-inner > .elementor-background-video-container::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .e-con-inner > .elementor-background-slideshow::before, .elementor-202 .elementor-element.elementor-element-9d562b1 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:transparent;background-image:linear-gradient(159deg, #191919 0%, #1F1F1F66 65%);}.elementor-202 .elementor-element.elementor-element-9d562b1{--overlay-opacity:0.4;}.elementor-202 .elementor-element.elementor-element-8358799 .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}@media(max-width:767px){.elementor-202 .elementor-element.elementor-element-d19aec3{--width:99px;--min-height:99px;}.elementor-202 .elementor-element.elementor-element-7222733{--width:80px;--min-height:80px;}.elementor-202 .elementor-element.elementor-element-8358799 .elementor-heading-title{font-size:var( --e-global-typography-c418380-font-size );line-height:var( --e-global-typography-c418380-line-height );}}/* Start custom CSS for container, class: .elementor-element-d19aec3 */.elementor-202 .elementor-element.elementor-element-d19aec3 {
+    /*width: fit-content;*/
+    padding: 19px;
+    border-radius: var(--radius-size-giant, 12px);
+    /*border: 1px solid var(--Gradient-Effect---Secondary, #E9F3FF);*/
+    /*background: rgba(19, 19, 19, 0.60);*/
+    /*box-shadow: 0px 0px 0px 1px rgba(10, 13, 18, 0.18) inset, 0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset, 0px 1px 2px 0px rgba(10, 13, 18, 0.05);*/
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-a0861f5 *//* glow effect - start */
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+.elementor-202 .elementor-element.elementor-element-a0861f5 .box-wrapper {
+  background: #101820;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.elementor-202 .elementor-element.elementor-element-a0861f5 .box {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  border-radius: 12px;
+  background: #101820;
+  position: absolute;
+}
+
+.elementor-202 .elementor-element.elementor-element-a0861f5 .box::after,
+.elementor-202 .elementor-element.elementor-element-a0861f5 .box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    #e9f3ff,
+    #fe5c01,
+    #101820,
+    #101820,
+    #fe5c01,
+    #e9f3ff,
+    #fe5c01,
+    #101820,
+    #101820,
+    #fe5c01,
+    #e9f3ff
+  );
+  z-index: -1;
+  transform: scale(1.02);
+  animation: animate 12s linear infinite;
+}
+
+.elementor-202 .elementor-element.elementor-element-a0861f5 .box::before {
+  filter: blur(5px);
+}
+
+@keyframes animate {
+  to {
+    --angle: 360deg;
+  }
+}
+/* glow effect - end *//* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-9d562b1 */.elementor-202 .elementor-element.elementor-element-9d562b1 {
+    /*width: 400px;*/
+    border-radius: var(--radius-size-giant, 12px);
+    border: 1px solid var(--Colors-Grays---Neutral-800, #40444C);
+    /*background: var(--Glass-Effect, linear-gradient(105deg, rgba(25, 25, 25, 0.30) 8.69%, rgba(31, 31, 31, 0.12) 91.31%));*/
+}/* End custom CSS */

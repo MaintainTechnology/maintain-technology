@@ -1,0 +1,490 @@
+<!doctype html><meta charset=utf-8><title>Next.js vs WordPress</title>
+<style>body{font:14px system-ui;margin:2rem;max-width:1100px}table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid #ddd;padding:.5rem;vertical-align:top;text-align:left}</style>
+<h1>Next.js build vs live WordPress</h1>
+<p>Pixel diff is the share of differing pixels over the shared area; text recall is the share of live words present locally.</p>
+<table><tr><th>Route</th><th>Pixel diff</th><th>Text recall</th><th>widgets/img/height<br><small>local / live</small></th><th>Missing headings</th><th>Shots</th><th>Error</th></tr>
+<tr>
+      <td><b>home</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">10.01%</td>
+      <td>100.0%</td>
+      <td><small>w 188 / 188<br>
+                 img 27 / 27<br>
+                 h 15004 / 15136</small></td>
+      <td><small>-</small></td>
+      <td><a href="home.desktop.local.png">local</a> · <a href="home.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>thank-you</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">8.77%</td>
+      <td>98.4%</td>
+      <td><small>w 19 / 19<br>
+                 img 3 / 3<br>
+                 h 803 / 903</small></td>
+      <td><small>Thank You</small></td>
+      <td><a href="thank-you.desktop.local.png">local</a> · <a href="thank-you.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>sitemap</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">8.70%</td>
+      <td>98.4%</td>
+      <td><small>w 19 / 19<br>
+                 img 3 / 3<br>
+                 h 803 / 903</small></td>
+      <td><small>Sitemap</small></td>
+      <td><a href="sitemap.desktop.local.png">local</a> · <a href="sitemap.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>test-page</b><br><small>desktop</small></td>
+      <td style="color:#9a6700;font-weight:700">7.83%</td>
+      <td>100.0%</td>
+      <td><small>w 30 / 30<br>
+                 img 4 / 4<br>
+                 h 5636 / 5778</small></td>
+      <td><small>-</small></td>
+      <td><a href="test-page.desktop.local.png">local</a> · <a href="test-page.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>who-we-are</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">17.24%</td>
+      <td>100.0%</td>
+      <td><small>w 84 / 83<br>
+                 img 13 / 13<br>
+                 h 6523 / 6696</small></td>
+      <td><small>-</small></td>
+      <td><a href="who-we-are.desktop.local.png">local</a> · <a href="who-we-are.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>why-maintain</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">17.69%</td>
+      <td>100.0%</td>
+      <td><small>w 81 / 80<br>
+                 img 13 / 13<br>
+                 h 7015 / 7125</small></td>
+      <td><small>-</small></td>
+      <td><a href="why-maintain.desktop.local.png">local</a> · <a href="why-maintain.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>what-we-do</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">11.16%</td>
+      <td>100.0%</td>
+      <td><small>w 93 / 93<br>
+                 img 10 / 10<br>
+                 h 7967 / 8174</small></td>
+      <td><small>-</small></td>
+      <td><a href="what-we-do.desktop.local.png">local</a> · <a href="what-we-do.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>the-maintain-promise</b><br><small>desktop</small></td>
+      <td style="color:#9a6700;font-weight:700">3.91%</td>
+      <td>100.0%</td>
+      <td><small>w 64 / 64<br>
+                 img 8 / 8<br>
+                 h 6788 / 6920</small></td>
+      <td><small>-</small></td>
+      <td><a href="the-maintain-promise.desktop.local.png">local</a> · <a href="the-maintain-promise.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>careers</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">14.37%</td>
+      <td>100.0%</td>
+      <td><small>w 87 / 86<br>
+                 img 14 / 14<br>
+                 h 8740 / 8849</small></td>
+      <td><small>-</small></td>
+      <td><a href="careers.desktop.local.png">local</a> · <a href="careers.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>contact</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">13.35%</td>
+      <td>100.0%</td>
+      <td><small>w 29 / 29<br>
+                 img 4 / 4<br>
+                 h 2396 / 2528</small></td>
+      <td><small>-</small></td>
+      <td><a href="contact.desktop.local.png">local</a> · <a href="contact.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>strikeforce-newsletter</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">14.38%</td>
+      <td>99.6%</td>
+      <td><small>w 57 / 57<br>
+                 img 10 / 10<br>
+                 h 4369 / 4530</small></td>
+      <td><small>-</small></td>
+      <td><a href="strikeforce-newsletter.desktop.local.png">local</a> · <a href="strikeforce-newsletter.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>case-studies</b><br><small>desktop</small></td>
+      <td style="color:#9a6700;font-weight:700">7.94%</td>
+      <td>92.1%</td>
+      <td><small>w 81 / 89<br>
+                 img 10 / 11<br>
+                 h 6127 / 6737</small></td>
+      <td><small>Unblocking a $9.4M Tech Contract Through Strategic Mediation</small></td>
+      <td><a href="case-studies.desktop.local.png">local</a> · <a href="case-studies.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>privacy-policy</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">13.07%</td>
+      <td>100.0%</td>
+      <td><small>w 54 / 53<br>
+                 img 5 / 5<br>
+                 h 4265 / 4208</small></td>
+      <td><small>-</small></td>
+      <td><a href="privacy-policy.desktop.local.png">local</a> · <a href="privacy-policy.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>terms-of-use</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">13.00%</td>
+      <td>100.0%</td>
+      <td><small>w 51 / 50<br>
+                 img 5 / 5<br>
+                 h 3890 / 3832</small></td>
+      <td><small>-</small></td>
+      <td><a href="terms-of-use.desktop.local.png">local</a> · <a href="terms-of-use.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>strikeforce-newsletter-demo</b><br><small>desktop</small></td>
+      <td style="color:#cf222e;font-weight:700">21.87%</td>
+      <td>79.7%</td>
+      <td><small>w 95 / 119<br>
+                 img 14 / 17<br>
+                 h 6767 / 8337</small></td>
+      <td><small>Piloted SAP IAM to Modernise Asset Management<br>From 140 Legacy Apps to One Unified Platform<br>Unblocking a $9.4M Tech Contract Through Strategic Mediation</small></td>
+      <td><a href="strikeforce-newsletter-demo.desktop.local.png">local</a> · <a href="strikeforce-newsletter-demo.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-unblocking-a-9-4m-tech-contract-through-</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.28%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 3287 / 3287</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-unblocking-a-9-4m-tech-contract-through-.desktop.local.png">local</a> · <a href="cs-unblocking-a-9-4m-tech-contract-through-.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-from-140-legacy-apps-to-one-unified-plat</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.27%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 3414 / 3414</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-from-140-legacy-apps-to-one-unified-plat.desktop.local.png">local</a> · <a href="cs-from-140-legacy-apps-to-one-unified-plat.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-piloted-sap-iam-to-modernise-asset-manag</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.28%</td>
+      <td>100.0%</td>
+      <td><small>w 85 / 85<br>
+                 img 7 / 7<br>
+                 h 3343 / 3343</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-piloted-sap-iam-to-modernise-asset-manag.desktop.local.png">local</a> · <a href="cs-piloted-sap-iam-to-modernise-asset-manag.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-cut-delivery-costs-by-50-through-offshor</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.27%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 3442 / 3442</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-cut-delivery-costs-by-50-through-offshor.desktop.local.png">local</a> · <a href="cs-cut-delivery-costs-by-50-through-offshor.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-delivered-to-timeline-despite-repeated-s</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.29%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 3356 / 3356</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-delivered-to-timeline-despite-repeated-s.desktop.local.png">local</a> · <a href="cs-delivered-to-timeline-despite-repeated-s.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-improved-go-live-quality-with-assured-te</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.29%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 3327 / 3327</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-improved-go-live-quality-with-assured-te.desktop.local.png">local</a> · <a href="cs-improved-go-live-quality-with-assured-te.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-rescued-500k-in-avoidable-erp-cost-throu</b><br><small>desktop</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.29%</td>
+      <td>100.0%</td>
+      <td><small>w 88 / 88<br>
+                 img 7 / 7<br>
+                 h 3247 / 3247</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-rescued-500k-in-avoidable-erp-cost-throu.desktop.local.png">local</a> · <a href="cs-rescued-500k-in-avoidable-erp-cost-throu.desktop.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>home</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">9.16%</td>
+      <td>100.0%</td>
+      <td><small>w 188 / 188<br>
+                 img 27 / 27<br>
+                 h 22538 / 22921</small></td>
+      <td><small>-</small></td>
+      <td><a href="home.mobile.local.png">local</a> · <a href="home.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>thank-you</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">14.60%</td>
+      <td>98.2%</td>
+      <td><small>w 19 / 19<br>
+                 img 3 / 3<br>
+                 h 1845 / 1924</small></td>
+      <td><small>Thank You</small></td>
+      <td><a href="thank-you.mobile.local.png">local</a> · <a href="thank-you.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>sitemap</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">14.61%</td>
+      <td>98.2%</td>
+      <td><small>w 19 / 19<br>
+                 img 3 / 3<br>
+                 h 1845 / 1924</small></td>
+      <td><small>Sitemap</small></td>
+      <td><a href="sitemap.mobile.local.png">local</a> · <a href="sitemap.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>test-page</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">12.71%</td>
+      <td>100.0%</td>
+      <td><small>w 30 / 30<br>
+                 img 4 / 4<br>
+                 h 6748 / 7131</small></td>
+      <td><small>-</small></td>
+      <td><a href="test-page.mobile.local.png">local</a> · <a href="test-page.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>who-we-are</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">22.62%</td>
+      <td>100.0%</td>
+      <td><small>w 84 / 83<br>
+                 img 13 / 13<br>
+                 h 11497 / 11954</small></td>
+      <td><small>-</small></td>
+      <td><a href="who-we-are.mobile.local.png">local</a> · <a href="who-we-are.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>why-maintain</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">29.48%</td>
+      <td>100.0%</td>
+      <td><small>w 81 / 80<br>
+                 img 13 / 13<br>
+                 h 13261 / 13622</small></td>
+      <td><small>-</small></td>
+      <td><a href="why-maintain.mobile.local.png">local</a> · <a href="why-maintain.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>what-we-do</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">16.26%</td>
+      <td>100.0%</td>
+      <td><small>w 93 / 93<br>
+                 img 10 / 10<br>
+                 h 13607 / 14540</small></td>
+      <td><small>-</small></td>
+      <td><a href="what-we-do.mobile.local.png">local</a> · <a href="what-we-do.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>the-maintain-promise</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">9.41%</td>
+      <td>100.0%</td>
+      <td><small>w 64 / 64<br>
+                 img 8 / 8<br>
+                 h 9568 / 9952</small></td>
+      <td><small>-</small></td>
+      <td><a href="the-maintain-promise.mobile.local.png">local</a> · <a href="the-maintain-promise.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>careers</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">20.28%</td>
+      <td>100.0%</td>
+      <td><small>w 87 / 86<br>
+                 img 14 / 14<br>
+                 h 12924 / 13285</small></td>
+      <td><small>-</small></td>
+      <td><a href="careers.mobile.local.png">local</a> · <a href="careers.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>contact</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">16.75%</td>
+      <td>100.0%</td>
+      <td><small>w 29 / 29<br>
+                 img 4 / 4<br>
+                 h 4210 / 4593</small></td>
+      <td><small>-</small></td>
+      <td><a href="contact.mobile.local.png">local</a> · <a href="contact.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>strikeforce-newsletter</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">23.93%</td>
+      <td>99.6%</td>
+      <td><small>w 57 / 57<br>
+                 img 10 / 10<br>
+                 h 8258 / 8728</small></td>
+      <td><small>-</small></td>
+      <td><a href="strikeforce-newsletter.mobile.local.png">local</a> · <a href="strikeforce-newsletter.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>case-studies</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">13.93%</td>
+      <td>92.0%</td>
+      <td><small>w 81 / 89<br>
+                 img 10 / 11<br>
+                 h 11603 / 13155</small></td>
+      <td><small>Unblocking a $9.4M Tech Contract Through Strategic Mediation</small></td>
+      <td><a href="case-studies.mobile.local.png">local</a> · <a href="case-studies.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>privacy-policy</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">28.28%</td>
+      <td>100.0%</td>
+      <td><small>w 54 / 53<br>
+                 img 5 / 5<br>
+                 h 6661 / 6480</small></td>
+      <td><small>-</small></td>
+      <td><a href="privacy-policy.mobile.local.png">local</a> · <a href="privacy-policy.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>terms-of-use</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">29.66%</td>
+      <td>100.0%</td>
+      <td><small>w 51 / 50<br>
+                 img 5 / 5<br>
+                 h 5833 / 5652</small></td>
+      <td><small>-</small></td>
+      <td><a href="terms-of-use.mobile.local.png">local</a> · <a href="terms-of-use.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>strikeforce-newsletter-demo</b><br><small>mobile</small></td>
+      <td style="color:#cf222e;font-weight:700">39.48%</td>
+      <td>79.6%</td>
+      <td><small>w 95 / 119<br>
+                 img 14 / 17<br>
+                 h 13157 / 17198</small></td>
+      <td><small>Piloted SAP IAM to Modernise Asset Management<br>From 140 Legacy Apps to One Unified Platform<br>Unblocking a $9.4M Tech Contract Through Strategic Mediation</small></td>
+      <td><a href="strikeforce-newsletter-demo.mobile.local.png">local</a> · <a href="strikeforce-newsletter-demo.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-unblocking-a-9-4m-tech-contract-through-</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.12%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 5583 / 5575</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-unblocking-a-9-4m-tech-contract-through-.mobile.local.png">local</a> · <a href="cs-unblocking-a-9-4m-tech-contract-through-.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-from-140-legacy-apps-to-one-unified-plat</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.03%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 6103 / 6095</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-from-140-legacy-apps-to-one-unified-plat.mobile.local.png">local</a> · <a href="cs-from-140-legacy-apps-to-one-unified-plat.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-piloted-sap-iam-to-modernise-asset-manag</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.00%</td>
+      <td>100.0%</td>
+      <td><small>w 85 / 85<br>
+                 img 7 / 7<br>
+                 h 6127 / 6119</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-piloted-sap-iam-to-modernise-asset-manag.mobile.local.png">local</a> · <a href="cs-piloted-sap-iam-to-modernise-asset-manag.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-cut-delivery-costs-by-50-through-offshor</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">0.99%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 6175 / 6167</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-cut-delivery-costs-by-50-through-offshor.mobile.local.png">local</a> · <a href="cs-cut-delivery-costs-by-50-through-offshor.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-delivered-to-timeline-despite-repeated-s</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.04%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 5887 / 5879</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-delivered-to-timeline-despite-repeated-s.mobile.local.png">local</a> · <a href="cs-delivered-to-timeline-despite-repeated-s.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-improved-go-live-quality-with-assured-te</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.05%</td>
+      <td>100.0%</td>
+      <td><small>w 89 / 89<br>
+                 img 7 / 7<br>
+                 h 5830 / 5822</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-improved-go-live-quality-with-assured-te.mobile.local.png">local</a> · <a href="cs-improved-go-live-quality-with-assured-te.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr>
+<tr>
+      <td><b>cs-rescued-500k-in-avoidable-erp-cost-throu</b><br><small>mobile</small></td>
+      <td style="color:#1a7f37;font-weight:700">1.15%</td>
+      <td>100.0%</td>
+      <td><small>w 88 / 88<br>
+                 img 7 / 7<br>
+                 h 5455 / 5447</small></td>
+      <td><small>-</small></td>
+      <td><a href="cs-rescued-500k-in-avoidable-erp-cost-throu.mobile.local.png">local</a> · <a href="cs-rescued-500k-in-avoidable-erp-cost-throu.mobile.live.png">live</a></td>
+      <td><small style="color:#cf222e"></small></td>
+    </tr></table>

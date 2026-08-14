@@ -1,0 +1,18 @@
+.elementor-803 .elementor-element.elementor-element-8e44332{--display:flex;--gap:0px 0px;--row-gap:0px;--column-gap:0px;--overflow:hidden;}/* Start custom CSS for template, class: .elementor-element-b40e5d8 */.elementor-803 .elementor-element.elementor-element-b40e5d8 .box-wrapper {
+    display: none;
+}
+
+.elementor-803 .elementor-element.elementor-element-b40e5d8 .mbs_parent {
+    gap: 0;
+}
+
+.elementor-803 .elementor-element.elementor-element-b40e5d8 .mbs_title h3 {
+    color: #FF5F00; 
+}
+
+.elementor-803 .elementor-element.elementor-element-b40e5d8 div[data-elementor-type="jet-engine-component"] .mbs_parent{
+    height: 375px;
+}
+.elementor-803 .elementor-element.elementor-element-b40e5d8 div[data-elementor-type="jet-engine-component"] > div .mbs_parent{
+    height: 375px;
+}/* End custom CSS */

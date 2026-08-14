@@ -1,0 +1,47 @@
+.elementor-481 .elementor-element.elementor-element-b7c4882{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:48px 48px;--row-gap:48px;--column-gap:48px;}.elementor-481 .elementor-element.elementor-element-1a688d4{--display:flex;--gap:52px 52px;--row-gap:52px;--column-gap:52px;--padding-top:0px;--padding-bottom:120px;--padding-left:0px;--padding-right:0px;}.elementor-481 .elementor-element.elementor-element-f0be7bc{--display:flex;}@media(max-width:1024px){.elementor-481 .elementor-element.elementor-element-b7c4882{--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;}.elementor-481 .elementor-element.elementor-element-1a688d4{--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}}@media(min-width:768px){.elementor-481 .elementor-element.elementor-element-1a688d4{--width:82%;}}@media(max-width:1024px) and (min-width:768px){.elementor-481 .elementor-element.elementor-element-1a688d4{--width:100%;}}/* Start custom CSS for jet-engine-component-230, class: .elementor-element-7dd228f */.elementor-481 .elementor-element.elementor-element-7dd228f #center .mbs_subtitle,
+.elementor-481 .elementor-element.elementor-element-7dd228f #center .mbs_title,
+.elementor-481 .elementor-element.elementor-element-7dd228f #center .mbs_content,
+.elementor-481 .elementor-element.elementor-element-7dd228f #center .mbs_content p{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.elementor-481 .elementor-element.elementor-element-7dd228f #no.mbs_icon,
+.elementor-481 .elementor-element.elementor-element-7dd228f #no.mbs_subtitle p,{
+    display: none !important;
+}
+
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h1 h1 {
+    display: flex !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h1 h2,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h1 h3,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h1 h4 {
+    display: none !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h2 h2 {
+    display: block !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h2 h1,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h2 h3,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h2 h4 {
+    display: none !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h3 h3 {
+    display: flex !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h3 h1,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h3 h2,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h3 h4 {
+    display: none !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h4 h4 {
+    display: flex !important;
+}
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h4 h1,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h4 h2,
+.elementor-481 .elementor-element.elementor-element-7dd228f #tag_h4 h3 {
+    display: none !important;
+}/* End custom CSS */

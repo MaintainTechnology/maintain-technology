@@ -1,0 +1,407 @@
+[
+  {
+    "route": "home",
+    "widgets": "188/188",
+    "containers": "218/218",
+    "imgs": "27/27",
+    "elementIds": "185/185",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.62121212121212,
+    "missingWords": [
+      "delete",
+      "you're"
+    ],
+    "extraWords": [
+      "size",
+      "files"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "thank-you",
+    "widgets": "19/19",
+    "containers": "20/20",
+    "imgs": "3/3",
+    "elementIds": "39/39",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "sitemap",
+    "widgets": "19/19",
+    "containers": "20/20",
+    "imgs": "3/3",
+    "elementIds": "39/39",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "test-page",
+    "widgets": "30/30",
+    "containers": "30/30",
+    "imgs": "4/4",
+    "elementIds": "60/60",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.11504424778761,
+    "missingWords": [
+      "delete",
+      "you're"
+    ],
+    "extraWords": [
+      "size",
+      "files",
+      "when"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "who-we-are",
+    "widgets": "84/83",
+    "containers": "101/101",
+    "imgs": "13/13",
+    "elementIds": "107/106",
+    "missingIds": 0,
+    "extraIds": 1,
+    "textRecall": 99.43661971830986,
+    "missingWords": [
+      "delete",
+      "you're"
+    ],
+    "extraWords": [
+      "span",
+      "subtitle",
+      "size",
+      "files"
+    ],
+    "widgetDelta": {
+      "heading": "41/40"
+    }
+  },
+  {
+    "route": "why-maintain",
+    "widgets": "81/80",
+    "containers": "95/95",
+    "imgs": "13/13",
+    "elementIds": "114/113",
+    "missingIds": 0,
+    "extraIds": 1,
+    "textRecall": 99.52718676122932,
+    "missingWords": [
+      "delete",
+      "you're"
+    ],
+    "extraWords": [
+      "span",
+      "subtitle",
+      "size",
+      "files",
+      "when"
+    ],
+    "widgetDelta": {
+      "heading": "42/41"
+    }
+  },
+  {
+    "route": "what-we-do",
+    "widgets": "93/93",
+    "containers": "100/100",
+    "imgs": "10/10",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.75490196078431,
+    "missingWords": [
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "the-maintain-promise",
+    "widgets": "64/64",
+    "containers": "81/81",
+    "imgs": "8/8",
+    "elementIds": "127/127",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.66996699669967,
+    "missingWords": [
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "careers",
+    "widgets": "87/86",
+    "containers": "100/100",
+    "imgs": "14/14",
+    "elementIds": "135/135",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.70674486803519,
+    "missingWords": [
+      "delete"
+    ],
+    "extraWords": [
+      "span",
+      "subtitle",
+      "size",
+      "files"
+    ],
+    "widgetDelta": {
+      "heading": "47/46"
+    }
+  },
+  {
+    "route": "contact",
+    "widgets": "29/29",
+    "containers": "29/29",
+    "imgs": "4/4",
+    "elementIds": "58/58",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.48979591836735,
+    "missingWords": [
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files",
+      "when"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "strikeforce-newsletter",
+    "widgets": "57/57",
+    "containers": "54/54",
+    "imgs": "10/10",
+    "elementIds": "71/71",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.28571428571429,
+    "missingWords": [
+      "safely",
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "case-studies",
+    "widgets": "81/81",
+    "containers": "90/90",
+    "imgs": "10/10",
+    "elementIds": "81/81",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.75186104218362,
+    "missingWords": [
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files",
+      "when"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "privacy-policy",
+    "widgets": "54/53",
+    "containers": "48/48",
+    "imgs": "5/5",
+    "elementIds": "102/101",
+    "missingIds": 0,
+    "extraIds": 1,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [
+      "lorem",
+      "ipsum",
+      "dolor",
+      "amet",
+      "consectetur",
+      "adipiscing",
+      "elit",
+      "eiusmod",
+      "tempor",
+      "incididunt",
+      "labore",
+      "dolore",
+      "magna",
+      "aliqua",
+      "enim",
+      "minim",
+      "veniam",
+      "quis"
+    ],
+    "widgetDelta": {
+      "heading": "24/23"
+    }
+  },
+  {
+    "route": "terms-of-use",
+    "widgets": "51/50",
+    "containers": "47/47",
+    "imgs": "5/5",
+    "elementIds": "98/97",
+    "missingIds": 0,
+    "extraIds": 1,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [
+      "lorem",
+      "ipsum",
+      "dolor",
+      "amet",
+      "consectetur",
+      "adipiscing",
+      "elit",
+      "eiusmod",
+      "tempor",
+      "incididunt",
+      "labore",
+      "dolore",
+      "magna",
+      "aliqua",
+      "enim",
+      "minim",
+      "veniam",
+      "quis"
+    ],
+    "widgetDelta": {
+      "heading": "22/21"
+    }
+  },
+  {
+    "route": "strikeforce-newsletter-demo",
+    "widgets": "95/95",
+    "containers": "98/98",
+    "imgs": "14/14",
+    "elementIds": "96/96",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 99.51100244498777,
+    "missingWords": [
+      "safely",
+      "delete"
+    ],
+    "extraWords": [
+      "size",
+      "files"
+    ],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:unblocking-a-9-4m-tech-contract-",
+    "widgets": "89/89",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:from-140-legacy-apps-to-one-unif",
+    "widgets": "89/89",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:piloted-sap-iam-to-modernise-ass",
+    "widgets": "85/85",
+    "containers": "85/85",
+    "imgs": "7/7",
+    "elementIds": "135/135",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:cut-delivery-costs-by-50-through",
+    "widgets": "89/89",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:delivered-to-timeline-despite-re",
+    "widgets": "89/89",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:improved-go-live-quality-with-as",
+    "widgets": "89/89",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "136/136",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  },
+  {
+    "route": "cs:rescued-500k-in-avoidable-erp-co",
+    "widgets": "88/88",
+    "containers": "89/89",
+    "imgs": "7/7",
+    "elementIds": "135/135",
+    "missingIds": 0,
+    "extraIds": 0,
+    "textRecall": 100,
+    "missingWords": [],
+    "extraWords": [],
+    "widgetDelta": {}
+  }
+]

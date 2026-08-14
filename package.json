@@ -1,0 +1,22 @@
+{
+  "name": "maintain-nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract": "node scripts/extract.mjs \"../maintaintechnology.WordPress.2026-08-11.xml\"",
+    "assets": "node scripts/fetch-assets.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "compare": "node scripts/compare.mjs"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}
