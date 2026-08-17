@@ -79,7 +79,9 @@ if (wrapY) {
       pinnedTop: Math.round(document.querySelector('.sticky_circle_wrap > .e-con').getBoundingClientRect().top),
       w: Math.round(document.querySelector('.circle').getBoundingClientRect().width),
     }));
-    check(st.pinnedTop === 0, `circle pinned at ${frac} (top=${st.pinnedTop})`);
+    // Live pins with Elementor sticky_offset:100 — the circle hangs just below
+    // the fixed header, expanding from the navbar's bottom edge.
+    check(st.pinnedTop === 100, `circle pinned at ${frac} (top=${st.pinnedTop})`);
     widths.push(st.w);
     await page.screenshot({ path: `${SHOTS}/circle-${frac}.png` });
   }

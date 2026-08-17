@@ -3,6 +3,9 @@ import { ElementorDocument } from '../../../lib/elementor/render.jsx';
 import { caseStudies, singleCaseStudy, listings, rows } from '../../../lib/content.js';
 import NavMenu from '../../../components/NavMenu.jsx';
 
+// Fixed content set: unknown slugs 404 rather than render on demand.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
 }

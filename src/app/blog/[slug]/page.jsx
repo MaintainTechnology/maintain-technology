@@ -7,6 +7,9 @@ const defaultSingle = Object.values(templates).find(
   (t) => t.kind === 'single-post' && /default/i.test(t.name)
 );
 
+// Fixed content set: unknown slugs 404 rather than render on demand.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return rows.posts.map((p) => ({ slug: p.slug }));
 }

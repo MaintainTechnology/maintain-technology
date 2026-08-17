@@ -4543,7 +4543,10 @@ html.js [text-split]:not([data-split]) {
 }
 .sticky_circle_wrap > .e-con {
   position: sticky;
-  top: 0;
+  /* Elementor Pro pinned this container with sticky_offset:100 (all devices):
+     the hero circle hangs 100px below the viewport top — just under the fixed
+     header — and expands from the navbar's bottom edge, never behind it. */
+  top: 100px;
 }
 .sticky_circle_wrap .circle {
   width: min(60em, 92vw);
@@ -4649,6 +4652,14 @@ html.js .fx-reveal.in-view {
   visibility: hidden;
   transition: opacity 0.35s ease, visibility 0.35s ease;
 }
+/* Elementor's base stylesheet hides popup documents with
+   `[data-elementor-type="popup"]:not(.elementor-edit-area){display:none}` —
+   specificity (0,2,0), which beats the single class above. Requalify so the
+   drawer keeps `display:flex` and opacity/visibility do the show/hide (a
+   display:none base state would also kill the open transition). */
+[data-elementor-type='popup'].elementor-location-popup {
+  display: flex;
+}
 .elementor-location-popup.is-open {
   opacity: 1;
   visibility: visible;
@@ -4667,6 +4678,10 @@ html.js .fx-reveal.in-view {
   position: relative;
 }
 .elementor-nav-menu .sub-menu {
+  /* Elementor's `--dropdown-none` widget CSS hides every `.elementor-nav-menu--dropdown`
+     (this ul included) with display:none; SmartMenus flipped it to block inline
+     on hover. Keep it block permanently — opacity/visibility below do the hiding. */
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -4691,6 +4706,16 @@ html.js .fx-reveal.in-view {
   margin-left: 0.35em;
   fill: currentColor;
   vertical-align: baseline;
+}
+
+/* --- sticky header (was Elementor Pro sticky) ----------------------------- */
+/* At rest the header is position:absolute over the hero (post-23.css). On the
+   live site Elementor Pro JS pins it with position:fixed once scrolled;
+   Effects.jsx toggles this class past the 100px effects offset. The blur/tint
+   restyle for the same class already ships in the live CSS. */
+html.js .elementor-location-header .header.elementor-sticky--effects {
+  position: fixed;
+  top: 0;
 }
 
 /* --- forms (was Forminator) ---------------------------------------------- */

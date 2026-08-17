@@ -3,6 +3,9 @@ import { ElementorDocument } from '../../../lib/elementor/render.jsx';
 import { singleNewsletter, listings, rows } from '../../../lib/content.js';
 import NavMenu from '../../../components/NavMenu.jsx';
 
+// Fixed content set: unknown slugs 404 rather than render on demand.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return rows.newsletters.map((n) => ({ slug: n.slug }));
 }

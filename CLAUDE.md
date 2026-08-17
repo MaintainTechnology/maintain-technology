@@ -84,9 +84,18 @@ static routes.**
 - **`.pretty` is a marker class with no styling.** Do not animate it — that hides
   ~54 elements per page. The real animation targets are the `_attributes` hooks.
 - **The popup opens via a dynamic-tag link resolving to `#popup-141`** (Elementor
-  popup action). Trigger/closer selectors live in Effects.jsx.
+  popup action); popup *close* tags carry `action: "close"` and resolve to
+  `#popup-close`. Trigger/closer selectors live in Effects.jsx. Elementor's base
+  CSS hides `[data-elementor-type="popup"]` at (0,2,0) specificity — app.css
+  requalifies the drawer's `display:flex`; don't weaken that selector.
 - **Known 404s that are broken on the live site too** (not regressions):
-  `2025/07/HoE_bg-1024x*.jpg`, `2025/07/phone-bold-1.svg`.
+  `2025/07/phone-bold-1.svg`. (`HoE_bg-1024x687.jpg` also 404s live, but a
+  locally generated variant now ships in `public/assets` so the Humans of ERP
+  background renders; regenerate from `HoE_bg.jpg` with sharp if it's lost.)
+- **JetEngine component instances print their dynamic background per instance**:
+  `componentInstanceCss()` in render.jsx emits the inline `<style>` that gives
+  the industry cards their `card_background_image`. Dropping it makes every
+  card background silently vanish (the CSS files never contain these rules).
 - **`jet-options-page` values are hard-coded** in `scripts/extract.mjs` under
   `OPTIONS` (contact email, phone, address, LinkedIn, booking link) because WXR
   doesn't include `wp_options`. Edit them there.

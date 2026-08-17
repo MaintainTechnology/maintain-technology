@@ -78,6 +78,9 @@ web_modules/
 .next
 out
 
+# Vercel project link (created by `vercel link`; contains project/org ids)
+.vercel
+
 # Nuxt.js build / generate output
 .nuxt
 dist

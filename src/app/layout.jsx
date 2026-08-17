@@ -7,6 +7,13 @@ export const metadata = {
   metadataBase: new URL('https://maintain.com.au'),
   title: { default: siteMeta.title, template: `%s | ${siteMeta.title}` },
   description: siteMeta.description,
+  icons: {
+    // Same two link tags the live site emits.
+    icon: [
+      { url: '/assets/2025/07/maintain_tech_favicon.svg', sizes: '32x32' },
+      { url: '/assets/2025/07/maintain_tech_favicon.svg', sizes: '192x192' },
+    ],
+  },
 };
 
 // Body classes the stylesheets key off. `elementor-kit-8` carries every design

@@ -4,6 +4,10 @@ import { publishedPages, pageBySlug, listings } from '../../lib/content.js';
 import NavMenu from '../../components/NavMenu.jsx';
 
 // Every published page is a static route. `home` is served at `/` instead.
+// The content set is fixed at build time, so unknown slugs 404 instead of
+// server-rendering on demand (where public/ assets aren't on disk).
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return publishedPages.filter((p) => p.slug !== 'home').map((p) => ({ slug: p.slug }));
 }

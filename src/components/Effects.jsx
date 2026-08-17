@@ -116,7 +116,7 @@ export default function Effects() {
       // (#elementor-action%3Aaction%3Dpopup%3Aopen...). Match those, plus the
       // generic hooks.
       const triggers = document.querySelectorAll(
-        'a[href^="#popup-"], a[href*="popup%3Aopen"], [data-popup-trigger], .menu-toggle, .header .elementor-widget-icon a[href="#"]'
+        'a[href^="#popup-"]:not([href="#popup-close"]), a[href*="popup%3Aopen"], [data-popup-trigger], .menu-toggle, .header .elementor-widget-icon a[href="#"]'
       );
       triggers.forEach((t) => {
         const h = (e) => { e.preventDefault(); open(); };
@@ -128,7 +128,7 @@ export default function Effects() {
       closers.forEach((c) => {
         const h = (e) => {
           // Elementor close-action links must not navigate.
-          if (/popup%3Aclose|popup:close|^#$/.test(c.getAttribute('href') || '')) e.preventDefault();
+          if (/popup%3Aclose|popup:close|^#$|^#popup-close$/.test(c.getAttribute('href') || '')) e.preventDefault();
           close();
         };
         c.addEventListener('click', h);

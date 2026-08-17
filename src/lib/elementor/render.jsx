@@ -4,7 +4,7 @@
 // generated CSS (src/styles/wp) is keyed on those exact classes and data-ids.
 // Every shape here was read off the real rendered HTML in reference/html.
 
-import { resolveSettings, isVisible, componentProps } from './props.js';
+import { resolveSettings, isVisible, componentProps, resolveTag } from './props.js';
 import { iconOf } from './svg.js';
 import { components, templates, images } from '../content.js';
 import HtmlWidget from '../../components/HtmlWidget.jsx';
@@ -342,21 +342,54 @@ function TemplateWidget({ settings, ctx }) {
   );
 }
 
+/** Per-instance styles JetEngine prints inline before each component render:
+    any container whose `background_image` is bound to a component prop gets a
+    background rule scoped to this instance (the industry cards). The selector
+    shape matches the live output. */
+function componentInstanceCss(componentId, uid, nodes, props, ctx) {
+  const rules = [];
+  const walk = (list) => {
+    for (const n of list || []) {
+      const raw = n.settings?.__dynamic__?.background_image;
+      if (raw) {
+        const v = resolveTag(raw, props, ctx);
+        const url = typeof v === 'string' ? v : v?.url;
+        if (url) {
+          const base = `.jet-component-instance-${uid}.jet-listing-grid--${componentId} .elementor-element.elementor-element-${n.id}`;
+          rules.push(
+            `${base}:not(.elementor-motion-effects-element-type-background), ${base} > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("${url}");}`
+          );
+        }
+      }
+      walk(n.elements);
+    }
+  };
+  walk(nodes);
+  return rules.join('');
+}
+
 function ComponentWidget({ componentId, settings, ctx, uid }) {
   const comp = components[componentId];
   if (!comp) return null;
   const props = componentProps(comp, settings);
+  const css = componentInstanceCss(componentId, uid, comp.tree, props, ctx);
   return (
-    <div
-      className={cx(
-        'elementor',
-        `elementor-${componentId}`,
-        `jet-listing-grid--${componentId}`,
-        `jet-component-instance-${uid}`
-      )}
-    >
-      <Tree nodes={comp.tree} ctx={{ ...ctx, props, depth: 0 }} />
-    </div>
+    <>
+      {css ? <style type="text/css">{css}</style> : null}
+      <div
+        data-elementor-type="jet-engine-component"
+        data-elementor-id={componentId}
+        className={cx(
+          'elementor',
+          `elementor-${componentId}`,
+          `jet-listing-grid--${componentId}`,
+          `jet-component-instance-${uid}`
+        )}
+        data-elementor-post-type="jet-engine"
+      >
+        <Tree nodes={comp.tree} ctx={{ ...ctx, props, depth: 0 }} />
+      </div>
+    </>
   );
 }
 

@@ -169,10 +169,31 @@ Without it, submissions are written to the server log rather than dropped.
 ## Deploying
 
 Static output plus one API route, so anything that runs Node works. On Vercel it
-is zero-config. Before going live:
+is zero-config: the framework is auto-detected, every page prerenders at build
+(`dynamicParams = false` on the slug routes — unknown slugs 404 instead of
+rendering on demand), and only `/api/forms` runs as a function. `.vercelignore`
+keeps the brand library (`maintain/`), the captured live site (`reference/`),
+and the WXR export out of CLI uploads — the build only needs `src/`, `content/`,
+`public/`, and `next.config.mjs`.
+
+Two ways to deploy:
+
+```bash
+# CLI (first time: link, then deploy)
+npm i -g vercel
+vercel link
+vercel          # preview URL
+vercel --prod   # production
+
+# or connect the git repo at vercel.com/new — every push then deploys
+# (preview per branch, production from main)
+```
+
+Before going live:
 
 1. Point `metadataBase` in `src/app/layout.jsx` and `BASE` in
    `src/app/sitemap.js` at the production domain if it is not maintain.com.au.
-2. Set `FORM_WEBHOOK_URL`.
+2. Set `FORM_WEBHOOK_URL` (see `.env.example`) in Project Settings →
+   Environment Variables, or `vercel env add FORM_WEBHOOK_URL`.
 3. Re-add Google Tag Manager (`GT-NNZ3WDJC`) if you still want it — it was
    deliberately not carried over.

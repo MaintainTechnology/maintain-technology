@@ -134,7 +134,8 @@ export function resolveTag(raw, props = {}, context = {}) {
       break;
     case 'popup':
       // Elementor emits an action URL; Effects.jsx listens for this instead.
-      value = `#popup-${s.popup}`;
+      // Close-action tags carry no popup id — they close whatever is open.
+      value = s.action === 'close' ? '#popup-close' : `#popup-${s.popup}`;
       break;
 
     // --- Misc ---------------------------------------------------------------

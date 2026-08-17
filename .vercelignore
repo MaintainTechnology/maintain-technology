@@ -1,0 +1,21 @@
+# Everything the Next.js build doesn't need. Trims CLI deploy uploads from
+# ~430MB to ~20MB. (Build inputs: src/, content/, public/, next.config.mjs.)
+
+# Brand asset library (326MB of PDFs/PNGs/PPTX — not served by the site)
+maintain/
+
+# Captured live-site HTML/CSS used only by the local parity scripts
+reference/
+
+# WordPress export the content was extracted from
+maintaintechnology.WordPress.*.xml
+
+# Local tooling and design collateral
+tools/
+design-system/
+landing-pages/
+.verify-shots/
+.playwright-mcp/
+.claude/
+.claude-flow/
+.vscode/
