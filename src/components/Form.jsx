@@ -5,7 +5,7 @@
 // asked before. Validation runs client-side for feedback and again on the
 // server, which is the only side that counts.
 
-import { useState, useId } from 'react';
+import { useState, useId, useRef } from 'react';
 
 function visible(field, values) {
   if (!field.conditions?.length) return true;
@@ -36,6 +36,9 @@ const TYPE_ATTRS = {
 
 export default function Form({ form }) {
   const uid = useId();
+  // Honeypot. The server already refuses any submission that fills this in,
+  // but nothing rendered it, so the check was never reachable.
+  const hp = useRef(null);
   const initial = () =>
     Object.fromEntries(
       form.fields.map((f) => {
@@ -89,7 +92,11 @@ export default function Form({ form }) {
       const res = await fetch('/api/forms', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ formId: form.id, values: payload }),
+        body: JSON.stringify({
+          formId: form.id,
+          values: { ...payload, _hp: hp.current?.value || '' },
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+        }),
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -228,6 +235,11 @@ export default function Form({ form }) {
           </div>
         );
       })}
+
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+        <label htmlFor={`${uid}-hp`}>Leave this field empty</label>
+        <input id={`${uid}-hp`} ref={hp} type="text" name="_hp" tabIndex={-1} autoComplete="off" defaultValue="" />
+      </div>
 
       <button type="submit" disabled={state.status === 'sending'}>
         {state.status === 'sending' ? 'Sendingâ€¦' : form.submitLabel}

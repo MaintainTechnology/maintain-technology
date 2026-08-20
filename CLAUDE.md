@@ -61,8 +61,11 @@ static routes.**
   split-text reveal library, the home-page circle scroll scrub, and card/image
   scroll reveals. Animation CSS states live in `app.css`. See DESIGN.md for the
   motion rules.
-- Forms are React (`src/components/Form.jsx`) + `/api/forms`; delivery is a
-  webhook via `FORM_WEBHOOK_URL`, otherwise server-logged.
+- Forms are React (`src/components/Form.jsx`) + `/api/forms`. Every form on the
+  site posts to that one route, so it is the only place delivery is wired.
+  Delivery is Resend (`src/lib/email.js`) when `RESEND_API_KEY` is set, plus an
+  optional `FORM_WEBHOOK_URL`; with neither, submissions are server-logged. A
+  submission counts as failed only when every configured channel fails.
 
 ## Non-obvious constraints (each one cost a debugging session)
 

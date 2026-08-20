@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { phpUnserialize } from './lib/wxr.mjs';
 import { parseTag, resolveTag, resolveSettings, isVisible, componentProps } from '../src/lib/elementor/props.js';
+import { escapeHtml, displayValue, fieldLabel, buildSubject, buildHtml, recipients } from '../src/lib/email.js';
 
 let n = 0;
 const it = (name, fn) => {
@@ -255,6 +256,87 @@ it('content: SEO titles have no unexpanded Rank Math templates', () => {
     const items = JSON.parse(fs.readFileSync(`content/${file}`, 'utf8'));
     for (const i of items) {
       assert.ok(!/%\w+%/.test(i.seo?.title || ''), `${file} ${i.slug}: unexpanded title "${i.seo.title}"`);
+    }
+  }
+});
+
+// --- form email (Resend delivery) ------------------------------------------
+it('email: enquiries go to info@maintain.com.au cc jon@pepco.com.au', () => {
+  const { to, cc, from } = recipients();
+  assert.equal(to, 'info@maintain.com.au');
+  assert.deepEqual(cc, ['jon@pepco.com.au']);
+  assert.match(from, /@maintain.com.au>?$/);
+});
+
+it('email: submitted values are escaped before they reach the HTML body', () => {
+  const payload = '<img src=x onerror="alert(1)">';
+  assert.ok(!escapeHtml(payload).includes('<img'), 'tag survived escaping');
+  const html = buildHtml({
+    form: { name: 'contact' },
+    rows: [{ label: 'Message', value: payload }],
+    meta: {},
+  });
+  assert.ok(!html.includes('<img src=x'), 'unescaped user input reached the email body');
+  assert.ok(html.includes('&lt;img'), 'expected the escaped form in the body');
+});
+
+it('email: option slugs are shown as the label the visitor saw', () => {
+  const forms = JSON.parse(fs.readFileSync('content/forms.json', 'utf8'));
+  const form = forms.find((f) => String(f.id) === '2539');
+  const budget = form.fields.find((f) => f.id === 'select-3');
+  assert.equal(displayValue(budget, 'under-1m'), 'Under $1m');
+  // Labels arrive entity-encoded out of WordPress; they must not reach the
+  // inbox as "AI &amp; Innovation".
+  const solutions = form.fields.find((f) => f.id === 'select-1');
+  assert.equal(displayValue(solutions, 'ai-innovation'), 'AI & Innovation');
+  assert.ok(!fieldLabel(solutions).includes('&amp;'));
+});
+
+it('email: consent booleans read as Yes/No, not true/false', () => {
+  assert.equal(displayValue({ type: 'consent' }, true), 'Yes');
+  assert.equal(displayValue({ type: 'consent' }, false), 'No');
+});
+
+it('email: a hostile entity cannot crash the request', () => {
+  // String.fromCodePoint throws above the Unicode range, and this runs on
+  // attacker-controlled input inside the POST handler: a throw here loses the
+  // submission and returns a 500.
+  for (const hostile of ['&#1114112;', '&#99999999;']) {
+    assert.doesNotThrow(() => displayValue({}, hostile), `crashed on ${hostile}`);
+  }
+  // ...while ordinary entities still decode.
+  assert.equal(displayValue({}, '&#65;'), 'A');
+  assert.equal(displayValue({}, 'It&#039;s'), "It's");
+});
+
+it('email: entity-encoded control characters do not survive decoding', () => {
+  // The route strips control characters, but decoding is what can re-create
+  // them, so the strip has to happen after it.
+  assert.ok(!/ /.test(displayValue({}, 'a&#0;b')));
+  const forged = buildSubject({ name: 'contact-form' }, [
+    { label: 'First Name', value: displayValue({}, 'Jane&#13;&#10;Bcc: evil@x.com') },
+  ]);
+  assert.ok(!/[\r\n]/.test(forged), `newline reached the subject: ${JSON.stringify(forged)}`);
+  assert.ok(buildSubject({ name: 'x' }, [{ label: 'Company', value: 'A'.repeat(500) }]).length <= 200);
+});
+
+it('email: the subject line identifies the branch and the sender', () => {
+  const subject = buildSubject({ name: 'mulitple-forms' }, [
+    { label: 'Type of Form', value: 'Career Opportunities' },
+    { label: 'First Name', value: 'Jane' },
+    { label: 'Last Name', value: 'Doe' },
+    { label: 'Company', value: 'Acme' },
+  ]);
+  assert.equal(subject, 'Career Opportunities - Jane Doe, Acme');
+  // The footer newsletter has no name fields and must still get a usable subject.
+  assert.match(buildSubject({ name: 'subscribe-form' }, [{ label: 'Email Address', value: 'a@b.com' }]), /Subscribe Form/);
+});
+
+it('email: every form field has a resolvable label for the email body', () => {
+  const forms = JSON.parse(fs.readFileSync('content/forms.json', 'utf8'));
+  for (const form of forms) {
+    for (const f of form.fields) {
+      assert.ok(fieldLabel(f).length, `${form.name}/${f.id} has no usable label`);
     }
   }
 });
