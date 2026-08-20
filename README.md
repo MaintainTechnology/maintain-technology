@@ -157,14 +157,35 @@ Worth knowing about, because both were invisible until measured:
 
 ## Configuration
 
-Form submissions default to server-side logging so the site can be deployed
-before a mail provider is chosen. Set one env var to deliver them:
+Every form on the site — the contact form (`2539`, on `/contact` and in the
+footer CTA that appears site-wide), the footer newsletter signup (`1311`) and
+the legacy contact form (`1225`) — posts to `/api/forms`. That single route is
+where delivery is wired, so configuring it covers all of them at once.
+
+Email goes out through [Resend](https://resend.com/docs):
 
 ```bash
-FORM_WEBHOOK_URL=https://…   # Slack / Teams / Zapier / CRM endpoint
+RESEND_API_KEY=re_…                                    # required to send
+RESEND_FROM="Maintain Technology <noreply@maintain.com.au>"   # verified domain
+FORM_TO_EMAIL=info@maintain.com.au
+FORM_CC_EMAIL=jon@pepco.com.au                         # comma-separated list
+FORM_WEBHOOK_URL=https://…                             # optional second channel
 ```
 
-Without it, submissions are written to the server log rather than dropped.
+Only `RESEND_API_KEY` has no default — the rest fall back to the values above.
+`RESEND_FROM` must be an address on a domain verified in the Resend dashboard
+(Domains → Add Domain → add the DKIM/SPF records); an unverified domain returns
+a 403 and nothing sends. `Reply-To` is set to the submitter, so replying in the
+inbox reaches them while the message itself stays DKIM-aligned to maintain.com.au.
+
+`FORM_WEBHOOK_URL` fires alongside the email when set. A submission is treated
+as failed only when *every* configured channel fails, and its content is written
+to the log in that case so it can still be recovered. With nothing configured at
+all, submissions are logged instead of dropped and the site still builds.
+
+The route also rate-limits to 10 submissions per IP per 10 minutes and carries a
+honeypot field; both are per-instance, so put a Vercel Firewall rule on
+`/api/forms` if the site ever scales past one warm instance.
 
 ## Deploying
 
@@ -193,7 +214,11 @@ Before going live:
 
 1. Point `metadataBase` in `src/app/layout.jsx` and `BASE` in
    `src/app/sitemap.js` at the production domain if it is not maintain.com.au.
-2. Set `FORM_WEBHOOK_URL` (see `.env.example`) in Project Settings →
-   Environment Variables, or `vercel env add FORM_WEBHOOK_URL`.
+2. Set `RESEND_API_KEY` (see `.env.example`) in Project Settings → Environment
+   Variables, or `vercel env add RESEND_API_KEY`, and confirm the sending domain
+   shows *verified* in the Resend dashboard. Env var changes only apply to new
+   deployments, so redeploy after adding it. Send one test enquiry and confirm
+   it arrives — mail from your own domain into your own inbox is the case most
+   likely to be filtered, so allowlist it in Microsoft 365 if it lands in junk.
 3. Re-add Google Tag Manager (`GT-NNZ3WDJC`) if you still want it — it was
    deliberately not carried over.

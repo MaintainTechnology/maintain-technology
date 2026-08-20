@@ -1,65 +1,69 @@
 ---
 name: maintain-infographics
-description: >-
-  Branded social-graphics generator for Maintain Technology. Use whenever the
-  user wants "a post for Maintain", a LinkedIn carousel, an Instagram post, a
-  stat card, a testimonial card, a "how it works" graphic, an infographic, a
-  marketing tile, or a flyer. You supply the copy; it enforces the brand so every
-  graphic looks like the same system. Produces on-brand PNGs + a ready-to-post
-  carousel PDF from a SLIDES JSON array via a bundled HTML engine and a Playwright
-  render script. Trigger on /maintain-infographics or any "make a branded
-  post/graphic/carousel/infographic for Maintain" request.
+description: Branded social-graphics generator for Maintain Audits marketing. Use whenever the user wants "a post for Maintain Audits", an infographic, a social tile, a stat card, a testimonial card, a LinkedIn carousel, or a flyer. You supply the copy; it handles all the styling so every graphic comes out in the same brand. Produces pixel-exact PNGs plus a ready-to-post carousel PDF from a copy-only SLIDES deck, in the brand's "Assurance" design system (Forge Blue + Assurance Green, Albert Sans + Inter). User-invocable via /maintain-infographics. Requires Playwright to render.
 ---
 
-# Maintain Technology — Infographics & Social Graphics
+# Maintain Audits — Infographics
 
-The on-brand alternative to hand-rolling CSS for every post. You give it the **copy**; it
-handles all the styling so every graphic comes out looking like Maintain Technology.
+A branded social-graphics generator for Maintain Audits. **You give it the copy; it handles the styling** — every graphic comes out looking like the same brand.
 
-**What it makes:** on-brand PNGs and a ready-to-post carousel PDF — LinkedIn carousels,
-Instagram posts, stat cards, testimonial cards, "how it works" graphics, marketing tiles.
+## What it makes
+On-brand **PNGs** and a ready-to-post **carousel PDF**: LinkedIn carousels, Instagram posts, stat cards, testimonial cards, "how it works" graphics, and marketing tiles. Default size is a **1080×1350** LinkedIn carousel (override per platform).
 
 ## How it works
+A bundled HTML engine (`assets/generator.html`) is driven by a **SLIDES deck** (`slides.json`) — one entry per panel. You edit the deck (headline, numbers, quote, etc.), then run `scripts/render.mjs` (Playwright) to output `slide-1.png … slide-N.png` + `carousel.pdf`.
 
-1. **Edit the copy** in [`assets/slides.json`](assets/slides.json) — a `SLIDES` array, one entry per panel (headline, numbers, items, quote, etc.). Copy an existing entry and change the text.
-2. **Render:** `node .claude/skills/maintain-infographics/scripts/render.mjs` — drives the bundled engine ([`assets/generator.html`](assets/generator.html)) with Playwright and writes `slide-1.png … slide-N.png` + `carousel.pdf` to `scripts/out/` (override: `node scripts/render.mjs <slides.json> <outDir>`).
-3. **Place & name** the exports per repo convention: social → `maintain/03 Social Media/`, named `maintain-<context>-<descriptor>[-variant].<ext>`.
+```bash
+# one-time
+npm i playwright && npx playwright install chromium
+# edit slides.json, then render
+node .claude/skills/maintain-infographics/scripts/render.mjs slides.json --out ./out
+# other sizes: --size 1080x1080 (IG post) · 1080x1920 (story)
+```
 
-Preview without rendering: serve the repo over a local HTTP server and open
-`/.claude/skills/maintain-infographics/assets/generator.html` (the engine reads `slides.json`).
-`file://` will not work — the engine links the design-system fonts/tokens over http.
+The engine pulls the **real logo and icon set** from `design-system/assets/sprite.svg`, so branding always matches the source of truth. It also draws on the **brand graphics library** in `assets/graphics/` (gradients, covers, mountain-form and section backgrounds) — see *Backgrounds & graphics*. Testimonial panels can take a supplied headshot (`avatar`), rendered in the brand's green-gradient circle.
 
-## The design it enforces (the Maintain system)
+## The design it enforces (the "Assurance" system)
+Deep **Forge Blue `#07272D`** canvas with a 1px green grid + green glow · one accent, **Assurance Green `#3DDC84`** (Signal Green `#06F285` rare) · **Albert Sans** (display) + **Inter** (body) · small/square corners · authoritative, evidence-led tone. Mirrors `DESIGN.md` / `design-system/tokens.css`.
 
-Pulled live from the repo's design system — never re-typed, never guessed:
-- **Ground:** dark — Black `#101820` / Forge Blue `#07272D` (the hero gradient). Light (Cloud `#F5F5F1`) only when asked.
-- **One accent:** Risk Orange `#FF5F00`. Teal `#257A88` / Yellow `#E2D0A0` are sparing secondaries, never a competing accent.
-- **Type:** Albert Sans (display / headlines, ALL CAPS, **one orange keyword** per headline) + Vela Sans (body). Aptos is Office-only and never appears here.
-- **Signature devices:** the wireframe **mountain motif** (`graphics/mountain forms 2.png`, screen-blended on dark), brand **gradients**, the **ember-glow** icon tile, colored Risk Orange Phosphor icons.
-- **Corners:** 8px (pills) / 12px (cards); the orange section-bullet stays square. Radii from `tokens.css`.
-- **Fonts + tokens:** linked from [`design-system/tokens/`](../../../design-system/tokens/); values from [`DESIGN.md`](../../../DESIGN.md). Do not hardcode hex — use the tokens.
+## Six panel types you compose from
+| Type | Purpose | Key fields |
+|---|---|---|
+| `cover` | Title / hero slide over a graphic | `headline`, `eyebrow?`, `sub?`, `bg` |
+| `stat` | Hard-number hook | `value`, `label`, `note`, `kicker` |
+| `list` | Breakdown in bordered cards | `headline`, `items[{title, detail}]` |
+| `steps` | Real ordered sequence | `headline`, `steps[]` |
+| `quote` | Real testimonial | `quote`, `name`, `role`, `avatar?` |
+| `cta` | Closing call to action | `headline`, `sub?`, `action`, `url` |
 
-Default size: **1080×1350** (LinkedIn/IG 4:5 carousel). Also 1080×1080 (square) and 1080×1920 (story) via the `format` field.
+**Any panel also accepts `bg` (a background graphic — see below) and `kicker` (a small top-right label).**
 
-## Panel types (compose a carousel from these)
+A typical carousel runs **cover → stat → list → steps → cta**. Deck shape:
+```json
+{ "size": "1080x1350", "handle": "maintainaudits.com.au", "slides": [ { "type": "stat", ... } ] }
+```
 
-`cover` (hook + logo + motif) · `stat` (one hard number) · `list` (breakdown in bordered cards) ·
-`steps` (real ordered sequence) · `quote` (real testimonial) · `cta` (closing call to action).
-A typical carousel runs **cover → stat → list → steps → quote → cta**.
+## Backgrounds & graphics
+Every file in `assets/graphics/` is usable as a full-bleed panel background. Add `bg` to any slide; the engine applies a legibility scrim and **flips the text colour automatically** — dark graphic → white text, light graphic → Forge-Blue text (per the brand's scrim rule).
+
+- **Dark (white text):** `cover` · `cover-2` · `green-gradient` · `blue-gradient` · `gradient` · `gradient-portrait` · `section` · `mountain-forms-1` · `mountain-forms-2` · `pantone-glow` · `mountain` · `blu-gradient`
+- **Light (Forge-Blue text):** `gradient-white` · `white-bg` · `white-gradient` · `white-linear` · `mountain-line`
+
+```json
+{ "type": "cover", "bg": "cover", "eyebrow": "Franchise assurance", "headline": "The audit force behind Australia's franchise networks" }
+```
+
+Any other filename works too (`"bg": "my-file.jpg"` resolves under `graphics/web/`, or pass a full relative path). Override the auto tone with `"tone": "light"` / `"dark"`. The renderer uses the **web-optimized** versions in `assets/graphics/web/` (fast, crisp at 2×); full-resolution originals live in `assets/graphics/` for print. Helper scripts ship alongside: `web_optimize.py` (regenerate the `web/` set) and `recolor.py` (recolour a graphic to brand green). `render.mjs` warns if a `bg` name has no matching file.
 
 ## Anti-slop rules (what keeps it from reading as AI-made)
+- No white text on green (text on green fills is Forge Blue). No second accent colour.
+- No emoji, no exclamation marks, no em-dashes in copy. `render.mjs` **warns** on any it finds.
+- No invented testimonials, no fake stats — pull real content from the `audits/` materials.
+- No text clipping at the frame edge — `render.mjs` warns if a panel overflows; shorten the copy or reduce items.
+- Inherits the design-system bans: no gradient text, side-stripe borders, decorative glass, or per-panel eyebrows.
 
-- **Risk Orange text never on a light ground** (2.8:1 fails) — orange lives on dark, or use `#662600` on light.
-- **One accent only** — no second competing colour.
-- **No gradient text, glassmorphism, side-stripe borders, identical-card-grid filler, or an eyebrow on every slide.**
-- **No emoji, no exclamation-mark drama, no em-dash overuse.**
-- **No invented testimonials or fake stats** — every number and quote must come from material the user provides or the brand docs. Missing? Put `[[NEEDS: …]]` and ask; never fabricate.
-- **No text clipping** — copy stays inside the safe margin at the final size. Trim copy if it overflows; don't shrink below the type floor.
-- Verify visually (render + look) and pass `/brand-check` before shipping.
+## When to use
+Any time the user wants a Maintain Audits post, infographic, social tile, stat card, testimonial, or flyer — it is the on-brand alternative to hand-rolling CSS each time. User-invocable with **`/maintain-infographics`**.
 
-## Dependencies
-
-Needs the repo's `design-system/` and `maintain/` present (this skill references them, so
-brand values stay in sync). `render.mjs` needs Playwright Chromium: `npm i playwright &&
-npx playwright install chromium` once. If Playwright isn't available, render via the browser
-tools instead (serve + screenshot each `.panel`, then print-to-PDF at 1080×1350).
+## Caveat
+Rendering needs **Playwright** (`npm i playwright && npx playwright install chromium`). Editing the deck and previewing `assets/generator.html` in a browser needs nothing.
